@@ -1,6 +1,4 @@
 # La veille techno en continue
 
-Ce livre a pour but d'être un recueil de sources qui permettent de rester au courant des dernières innovations en matière de développement, mais on y trouve aussi des articles intéressants qui permettent de se rappeler des bases, ou étendre un sujet ...
-
-Il s'adresse à des développeurs C\# .net cherchant à se perfectionner.
+Ce livre est une prise de note personnelle pour retrouver plus facilement les sujets vus lors de veille technologique, grâce à la fonction de recherche GitBook, mais il peut aussi s'adresser à des développeurs C\# .net cherchant à se perfectionner.
 
