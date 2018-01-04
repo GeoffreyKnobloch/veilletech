@@ -1,3 +1,0 @@
-{
-    "plugins": [ "theme-default" , "-fontsettings", "-sharing", "search", "lunr" ]
-}
