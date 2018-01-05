@@ -17,7 +17,7 @@ doc.Accept(visitor);
 Console.WriteLine("Html:\n" + visitor.Output);
 ```
 
-Mise en place :
+## Mise en place :
 
 ```c\#
 public interface IVisitor {
@@ -94,11 +94,13 @@ Le visiteur Html veut obtenir la version html du document donc on implémente vi
 D'ou l'utilisation finale :
 
 ```
-Document doc = ...;
-HtmlVisitor visitor = new HtmlVisitor();
-doc.Accept(visitor);
-Console.WriteLine("Html:\n" + visitor.Output);
+Document doc = ...; //Nouveau document composé d'une liste de docpart
+HtmlVisitor visitor = new HtmlVisitor(); // visitor définit telle que visite(docPart) renvoie alimente son output en html
+doc.Accept(visitor); // Le doc accepte le visitor : il fait accepter le visitor à chaqueune de ses docpart qui ellent activent la visite(docpart)
+Console.WriteLine("Html:\n" + visitor.Output); // Exploitation du résultat en output du visitor
 ```
 
+## Que résoud ce Design pattern ...
 
+Le problème du **Double Dispatch**
 
