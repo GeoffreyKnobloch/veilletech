@@ -10,4 +10,5 @@
     * [Creational Patterns](dotnet/design-pattern/creational-patterns.md)
     * [Behavorial Patterns](dotnet/design-pattern/behavorial-patterns.md)
       * [Visitor](dotnet/design-pattern/behavorial-patterns/visitor.md)
+    * [Structural Patterns](dotnet/design-pattern/structural-patterns.md)
 
