@@ -19,6 +19,8 @@ Console.WriteLine("Html:\n" + visitor.Output);
 
 ## Mise en place :
 
+[https://github.com/GeoffreyKnobloch/DesignPatternVisitor](https://github.com/GeoffreyKnobloch/DesignPatternVisitor) pour un projet exemple
+
 ```c\#
 public interface IVisitor {
   void Visit(PlainText docPart);
