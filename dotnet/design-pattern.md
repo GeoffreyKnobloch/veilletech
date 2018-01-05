@@ -26,3 +26,5 @@ Les patterns définissant un comportement
 
 Cet article explique de façon très clair l'intérêt du Visitor Pattern
 
+// TODO : mettre l'exemple de code très parlant
+
