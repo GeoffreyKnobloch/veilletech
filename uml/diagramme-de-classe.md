@@ -17,13 +17,27 @@ L'avantage d'être concis, mais il commence à dater. \(2003\)
 
 ![](/assets/association.png)
 
-L'association : Trait plein pouvant être orienté 
+L'association : Trait plein pouvant être orienté
 
-## Relation de spécialisation/généralisation
+Représentation orientée :
+
+**Contrat -&gt; Client **\(Contrat a un Client\)
+
+### Composition et agregation
+
+### ![](/assets/LOM_base_schema.png)
+
+Le schéma est composé de "General, LifeCycle, ..."
+
+Technical compose le LOMv1.0schema
+
+Technical est dans le LOMv1.0schema
+
+Relation de spécialisation/généralisation
 
 ```
       class ClientProfessionnel : Client {
-     
+
         ...
       }
 ```
@@ -34,10 +48,9 @@ Héritage : Flèche fermée  \(avec triangle blanc\) orienté de la classe spéc
 
 ## Relation de réalisation
 
-```
-
+```java
       class SaisirClient extends JFrame implements ActionListener {
-     
+
         ...
         public void actionPerformed(ActionEvent e) {
            // faire quelque chose
@@ -54,9 +67,8 @@ SaisirClient implémente l'interface ActionListener
 ## Relation de dépendance
 
 ```
-
       class Contrat {
-     
+
         ...
         public void impression() {
            Printer imprimante = PrinterFactory.getInstance();
