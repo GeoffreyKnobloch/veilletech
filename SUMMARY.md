@@ -9,6 +9,7 @@
     * [Visitor](dotnet/design-pattern/behavorial-patterns/visitor.md)
     * [Command](dotnet/design-pattern/behavorial-patterns/command.md)
   * [Structural Patterns](dotnet/design-pattern/structural-patterns.md)
+    * [Proxy](dotnet/design-pattern/structural-patterns/proxy.md)
 * [framework .net](dotnet/versions-du-framework.md)
 * [Gestion de projet](management.md)
   * [Agile](management/agile.md)
