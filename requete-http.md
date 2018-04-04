@@ -25,7 +25,7 @@ Corps de requête
 * URL : Adresse de la page SUR LE SERVEUR \(Repertoire/Page\)
 * Version : HTTP/1.1 par exemple.
 * En-tête : Suite de valeurs sous la forme  -&gt; Nom : Valeur
-* nouvelle ligne &lt;==&gt; \r\n supplémentaire.
+* nouvelle ligne &lt;==&gt; \r\n supplémentaire.
 * Corps de requête : Le body, par exemple : variable=valeur&variable2=valeur2
 
 #### Exemple de requête POST
@@ -58,10 +58,10 @@ Remarque intéressante : Il est possible de passer des variables GET via l'URL m
 #### Syntaxe générale
 
 ```
-Version Code-réponse Texte-réponse (Appelé la ligne de statut)
-En-tête de réponse
-<nouvelle ligne>
-Corps de réponse
+Version Code-réponse Texte-réponse (Appelé la ligne de statut)
+En-tête de réponse
+<nouvelle ligne>
+Corps de réponse
 ```
 
 * Version : Version HTTP du serveur
@@ -153,7 +153,7 @@ Content-Length: nnn
 
 ## Outil PostMan
 
- [https://www.getpostman.com/apps](https://www.getpostman.com/apps)
+[https://www.getpostman.com/apps](https://www.getpostman.com/apps)
 
 // TODO : Expérimenter Postman
 
@@ -171,4 +171,6 @@ Content-Length: nnn
 [https://github.com/Reactive-Extensions/Rx.NET](https://github.com/Reactive-Extensions/Rx.NET)
 
 // TODO : Explorer
+
+
 

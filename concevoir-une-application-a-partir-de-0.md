@@ -25,12 +25,14 @@ Cette vidéo illustre la conception et le développement d'une application ASP .
         * EndDate : DateTimeOffset
 
       * Segment.cs \(vol, ou hotel, ..\)
+
         * Id : int
         * TripId : int \(Un segment est rattaché à un Trip\)
         * Name : str
         * Description : str
         * StartDateTime : DateTimeOffset
         * EndDateTime : DateTimeOffset
+
       * Repository.cs : Du "Mocking" à la main, en dur, en attendant d'utiliser le framework d'accès en BDD.
         * MyTrips : List&lt;Trip&gt; private ici en dur initialiser cette variable privée avec 3 Trip
         * public : List&lt;Trip&gt; Get, =&gt; Get sur MyTrip
@@ -39,6 +41,7 @@ Cette vidéo illustre la conception et le développement d'une application ASP .
         * public void Remove \(int id\) =&gt; Remode selon l'Id
 
     * Dossier Controllers \(créé par défaut\) :
+
       * Comme nous avons fait un projet API, par défaut, un controller ValuesController a été créé.
       * Sur .net core le dossier Controllers est pour tous les controllers, pas de différence entre un dossier APIControllers et le reste des Controllers qui servaient au MVC pour diriger les Views.
       * Création d'un TripsController qui reprend tout le code de ValuesControllers 
