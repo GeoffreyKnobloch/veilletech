@@ -14,5 +14,6 @@
 * [Utilitaire](utilitaire.md)
 * [Conception ASP .net Core](concevoir-une-application-a-partir-de-0.md)
 * [Requête Http](requete-http.md)
+* [Entretien technique](recrutement.md)
 * [Ressources](ressources.md)
 
