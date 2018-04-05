@@ -41,7 +41,7 @@ ASP.NET Core (.NET Core, Linux): 900k req/sec
 ASP.NET Core (.NET Core, Windows): >1.1m req/sec
 ```
 
-### Plan d'exécution 
+### Plan d'exécution
 
 .net Framework :
 
@@ -51,7 +51,9 @@ ASP.NET Core (.NET Core, Windows): >1.1m req/sec
 
 ![](https://i.stack.imgur.com/nWPth.png)
 
-## Pourquoi choisir .net Core
+## Choisir entre .net Core et .net Framework
+
+Avantages .net Core :
 
 * Cross-Platform
 * Microservices : Si une fonctionnalité n'est pas supporté par .net Core, il est possible de développer un microservice basé sur le framework .net qui me fournit la fonctionnalité du .net framework.

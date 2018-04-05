@@ -1,4 +1,4 @@
-# Concevoir une application à partir de 0
+# Concevoir une application ASP .net Core à partir de 0
 
 Source : [https://www.twitch.tv/videos/229614321](https://www.twitch.tv/videos/229614321)
 
