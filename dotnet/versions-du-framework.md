@@ -4,9 +4,42 @@
 
 [https://docs.microsoft.com/fr-fr/dotnet/framework/whats-new/](https://docs.microsoft.com/fr-fr/dotnet/framework/whats-new/ "MSDN")
 
-NEO : .net version 3.5
+NEO : Application IT-CE ASP .Net 3.5 Framework .net en version 3.5
 
-Dernière version à date avril 2018 : .net version 4.7.1
+Fichier web.config : 
+
+```
+    <pages>
+      <controls>
+        <add tagPrefix="asp" namespace="System.Web.UI" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add tagPrefix="asp" namespace="System.Web.UI.WebControls" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add tagPrefix="fi" namespace="Fiihm" assembly="fiihm"/>
+      </controls>
+    </pages>
+    <httpHandlers>
+      <remove verb="*" path="*.asmx"/>
+      <add verb="*" path="*.asmx" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add verb="*" path="*_AppService.axd" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" validate="false"/>
+    </httpHandlers>
+    <httpModules>
+      <add name="ScriptModule" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+    </httpModules>
+```
+
+Technologie de 2008 environ, en témoigne ce livre et sa date de parution :
+
+[https://www.eyrolles.com/Informatique/Livre/microsoft-asp-net-3-5-etape-par-etape-9782100515790](https://www.eyrolles.com/Informatique/Livre/microsoft-asp-net-3-5-etape-par-etape-9782100515790) 
+
+
+
+Dernière version à date avril 2018 :
+
+Framework .net version 4.7.1
+
+ASP .net MVC 6 qui est une partie de ASP .net Core.
+
+ASP .net MVC 5 qui est renommé en ASP .net Core.
 
 ## Différence entre .net Core, .net Framework et Xamarin
 
