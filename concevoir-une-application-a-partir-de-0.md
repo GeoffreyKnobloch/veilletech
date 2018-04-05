@@ -34,6 +34,7 @@ Cette vidéo illustre la conception et le développement d'une application ASP .
         * EndDateTime : DateTimeOffset
 
       * Repository.cs : Du "Mocking" à la main, en dur, en attendant d'utiliser le framework d'accès en BDD.
+
         * MyTrips : List&lt;Trip&gt; private ici en dur initialiser cette variable privée avec 3 Trip
         * public : List&lt;Trip&gt; Get, =&gt; Get sur MyTrip
         * public void Add \(Trip NewTrip\) =&gt; Ajout sur MyTrip
