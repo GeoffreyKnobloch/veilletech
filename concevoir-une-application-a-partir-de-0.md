@@ -4,7 +4,7 @@ Source : [https://www.twitch.tv/videos/229614321](https://www.twitch.tv/videos/2
 
 Cette vidéo illustre la conception et le développement d'une application ASP .NET CORE en 8 heures par @csharpfritz featuring @spboyer
 
-* Premièrement, on conçoit l'API de l'application \(Bien séparer le back du \(des ?\) front\)
+* **Premièrement, on conçoit l'API de l'application \(Bien séparer le back du \(des ?\) front\)**
 
   * Nouveau Projet - API
   * Program.cs :
@@ -64,7 +64,7 @@ Cette vidéo illustre la conception et le développement d'une application ASP .
 
             * ConfigureServices : 
 
-            en dessous de services.AddMvc\(\),   
+            en dessous de services.AddMvc\(\),  
             services.AddSwaggerGen\(options =&gt; options.SwaggerDoc\("v1", new Info {Title = "Trip Tracker", Version = "v1" } \)  
             \);
 
@@ -83,7 +83,39 @@ Cette vidéo illustre la conception et le développement d'une application ASP .
     * Win + R / Cmd / cd / DIR ==&gt; Répertoire voulu, ...
     * Apprendre Git de façon détaillé à l'occasion.
 
-* Deuxième étape après l'API, 1h01:51 à continuer
+* **Deuxième étape après l'API, Travailler sur la base de donnée \(Entity Framework sera utilisé\)**
+
+  * EntityFramework pour SqlLite.
+
+  * Ouvrir .csproj et s'assurer qu'on a Microsoft.AspNetCore.All \(version 2.0.5 ici\). En faisant référence à ce package, ça fait référence à tous les package nécessaire à EntityFramework et d'autres choses, donc pas besoin d'ajouter de truc fancy pour utiliser EntityFramework.
+
+  * Ducoup tout le nécessaire est "magiquement" là, mais c'est pas magique, c'est en fait due à cette référence dans le csproj, qui est fait sur les projets asp net core par défaut.
+
+  * Quand on regarde d'ailleurs ducoup dans Dependencies / NuGet / Microsoft.AspNetCore.All / là on voit tous les packages qu'on a include automatiquement !! Et il y en a beaucoup, dont Entity Framework, SqlLite, SqlServer, ... bien évidemment.
+
+  * Ducoup on peut se demander !! Je ne veux pas déployer tous ces packages !!! En fait lors d'un déploiement, cela ne va déployer que les packages qu'on utilise réellement. Fort !
+
+  * Creer un folder Data
+
+    * classe TripContext : DbContext
+
+      * propriété DbSet&lt;Trip&gt; Trips \(Microsoft.EntityFrameworkCore\), 
+
+  * Dans Startup.cs :
+
+    * Dans COnfigureServices : Ajout de AddDbContext&lt;TripContext&gt; \(options =&gt; options.UseSqlLite\("Date Source = YourDbFileName.db"\) 
+
+      * Conséquence : On a injecté la dépendance sur DbContext&lt;TripContext&gt; avec l'option de travailler sur Sql Lite.
+
+  * Dans le Controller TripsController :
+
+    * Ajout d'une variable privée TripContext \_context \(qui permet l'accès en bdd\) et constructeur : \_context = context
+
+    * Le fait d'avoir un TripContext en argument du constructeur, ASP .net \(behind the scene\) va instancier un TripContext lors de l'instanciation du controller TripsController.
+
+    * Pour information, le controller est instancié par request, donc à chaque request, le controller est instancié, et un nouveau TripContext sera instancié.
+
+    * Donc on précise bien qu'ici un TripContext est instancié dans le controller. Pour une application de taille un peu plus grande, faire plutôt comme j'ai fait pour Lorena.sln, Un nouveau dossier d'accès à la DATA \(ou projet ??\) qui accède à la DATA TripContext et qui encapsule le tout. Et le controller instance un objet de la DAL, et non un TripContext.
 
 
 
