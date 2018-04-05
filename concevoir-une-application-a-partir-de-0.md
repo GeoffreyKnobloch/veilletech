@@ -49,6 +49,7 @@ Cette vidéo illustre la conception et le développement d'une application ASP .
       * Pour accéder aux données \(Repository.cs\), on va injecter cette dépendance dans Startup.cs
       * Modification de ConfigureServices -&gt; services.AddTransient&lt;Models.Repository&gt;\(\);
       * Ducoup dans le TripsController, on peut faire référence au Repository directement :
+
         * private Models.Repository \_repository; 
         * TripsController constructeur avec argument Repository repository qui affecte repository à \_repository
         * Get : retourne \_repository.Get\(\)
@@ -56,25 +57,31 @@ Cette vidéo illustre la conception et le développement d'une application ASP .
         * Post : \_repository.Add
         * Debug =&gt; Peut choisir la page par défaut : api/Trips c'est bien pratique, pour tester l'API nouvellement créée
         * Utilisation de Swagger :
+
           * Sur le projet d'API : Ajouter new nugget package : Swashbuckle.AspNetCore
           * et Swashbuckle.AspNetCore.SwaggerUI
           * Startup.cs :
+
             * ConfigureServices : 
 
-            en dessous de services.AddMvc\(\), 
-            services.AddSwaggerGen\(options =&gt; options.SwaggerDoc\("v1", new Info {Title = "Trip Tracker", Version = "v1" } \)
+            en dessous de services.AddMvc\(\),   
+            services.AddSwaggerGen\(options =&gt; options.SwaggerDoc\("v1", new Info {Title = "Trip Tracker", Version = "v1" } \)  
             \);
+
             * Configure : 
 
             Au dessus de app.UseMvc : app.UseSwagger\(\); et app.UseSwaggerUI\( avec des options
 
           En utilisant ces options, /swagger dans l'url nous montre parfaitement l'API. Superbe façon de documenter et partager son API
+
         * Comme le test fait un réél DELETE, UPDATE, utiliser la variable env dans le Startup.cs est une excellente idée pour éviter d'avoir la géniale UI de swagger en prod.
 
   * Enfin, mettre l'API sur GitHub :
+
     * New Repository
     * Public, .gitignore : VisualStudio, licence : Apache. Copier le lien pour download or clone ...
     * Win + R / Cmd / cd / DIR ==&gt; Répertoire voulu, ...
+    * Apprendre Git de façon détaillé à l'occasion.
 
 * Deuxième étape après l'API, 1h01:51 à continuer
 
