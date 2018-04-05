@@ -11,10 +11,8 @@
   * [Structural Patterns](dotnet/design-pattern/structural-patterns.md)
     * [Proxy](dotnet/design-pattern/structural-patterns/proxy.md)
 * [framework .net](dotnet/versions-du-framework.md)
-* [Gestion de projet](management.md)
-  * [Agile](management/agile.md)
-  * [Cycle en V](management/cycle-en-v.md)
 * [Utilitaire](utilitaire.md)
 * [Conception ASP .net Core](concevoir-une-application-a-partir-de-0.md)
 * [Requête Http](requete-http.md)
+* [Ressources](ressources.md)
 
