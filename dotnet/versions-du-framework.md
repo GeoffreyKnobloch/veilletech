@@ -58,6 +58,7 @@ Avantages .net Core :
 * Cross-Platform
 * Microservices : Si une fonctionnalité n'est pas supporté par .net Core, il est possible de développer un microservice basé sur le framework .net qui me fournit la fonctionnalité du .net framework.
 * Solution la plus performante et scalable
+* Open source !
 
 Source : [http://www.codechannels.com/article/microsoft/when-should-i-still-use-net-framework-4-x-instead-of-net-core/](http://www.codechannels.com/article/microsoft/when-should-i-still-use-net-framework-4-x-instead-of-net-core/)
 
