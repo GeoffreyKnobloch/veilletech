@@ -54,7 +54,29 @@ Cette vidéo illustre la conception et le développement d'une application ASP .
         * Get : retourne \_repository.Get\(\)
         * Put : \_repository.update
         * Post : \_repository.Add
-        * 39:25 : Continuer \(il va consulter son api via url pour voir ce qu'il obtient\)
+        * Debug =&gt; Peut choisir la page par défaut : api/Trips c'est bien pratique, pour tester l'API nouvellement créée
+        * Utilisation de Swagger :
+          * Sur le projet d'API : Ajouter new nugget package : Swashbuckle.AspNetCore
+          * et Swashbuckle.AspNetCore.SwaggerUI
+          * Startup.cs :
+            * ConfigureServices : 
+
+            en dessous de services.AddMvc\(\), 
+            services.AddSwaggerGen\(options =&gt; options.SwaggerDoc\("v1", new Info {Title = "Trip Tracker", Version = "v1" } \)
+            \);
+            * Configure : 
+
+            Au dessus de app.UseMvc : app.UseSwagger\(\); et app.UseSwaggerUI\( avec des options
+
+          En utilisant ces options, /swagger dans l'url nous montre parfaitement l'API. Superbe façon de documenter et partager son API
+        * Comme le test fait un réél DELETE, UPDATE, utiliser la variable env dans le Startup.cs est une excellente idée pour éviter d'avoir la géniale UI de swagger en prod.
+
+  * Enfin, mettre l'API sur GitHub :
+    * New Repository
+    * Public, .gitignore : VisualStudio, licence : Apache. Copier le lien pour download or clone ...
+    * Win + R / Cmd / cd / DIR ==&gt; Répertoire voulu, ...
+
+* Deuxième étape après l'API, 1h01:51 à continuer
 
 
 
