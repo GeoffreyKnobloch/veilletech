@@ -103,7 +103,7 @@ Cette vidéo illustre la conception et le développement d'une application ASP .
 
   * Dans Startup.cs :
 
-    * Dans COnfigureServices : Ajout de AddDbContext&lt;TripContext&gt; \(options =&gt; options.UseSqlLite\("Date Source = YourDbFileName.db"\) 
+    * Dans COnfigureServices : Ajout de AddDbContext&lt;TripContext&gt; \(options =&gt; options.UseSqlLite\("Date Source = YourDbFileName.db"\)
 
       * Conséquence : On a injecté la dépendance sur DbContext&lt;TripContext&gt; avec l'option de travailler sur Sql Lite.
 
@@ -116,6 +116,10 @@ Cette vidéo illustre la conception et le développement d'une application ASP .
     * Pour information, le controller est instancié par request, donc à chaque request, le controller est instancié, et un nouveau TripContext sera instancié.
 
     * Donc on précise bien qu'ici un TripContext est instancié dans le controller. Pour une application de taille un peu plus grande, faire plutôt comme j'ai fait pour Lorena.sln, Un nouveau dossier d'accès à la DATA \(ou projet ??\) qui accède à la DATA TripContext et qui encapsule le tout. Et le controller instance un objet de la DAL, et non un TripContext.
+
+    * Data annotation : préciser Key, Requiered, etc. Mais plutôt sur le ViewModel je pense. Sinon on peut override une méthode dans le TripContext qui à l'initiatlisation se lance, et qui précise que la clé primaire c'est l'id par exemple. Mais par convention si la propriété est écrie Id ou TypeId alors c'est directement reconnu comme étant l'Id par entity framework \(Convention over configuration\). et let Get\(Id\) peut s'écrire \_tripContext.Find\(id\) tout simplement, sans passer par Linq t =&gt; t.Id == id\)
+
+    * 1 h 48 : Voir lorsqu'il rend l'API Async pour ne pas avoir à attendre les Web Services.
 
 
 
