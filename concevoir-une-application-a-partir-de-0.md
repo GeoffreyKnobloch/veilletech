@@ -209,9 +209,89 @@ Invitation de Jon Galloway.
 
 ## Quatrième étape : Création de l'UI
 
-New Project /TripTracker.UI / ASP Web App \(Razor\) Authentication : Individual User Account \(Compliqué d'ajouter après\)
+New Project /TripTracker.UI / ASP Web App \(pas la MVC\) \(Razor\) Authentication : Individual User Account \(Compliqué d'ajouter après\)
 
 Individual ou Work or School Account sont des options intéressantes.
+
+DOnc on a :
+
+Dossier :
+
+Controllers, Data, Extensions, Pages, Services, et les classes program.cs et startup.cs
+
+On va build l'UI avec des pages Razor.
+
+C'est comme une couche en plus du MVC \(razor\).
+
+MVC normal c'est parfois un peu lourd ! Models deviennent ViewModel le controller les transmet à la View ...
+
+C'est parfait ! Pour des très gros projet, sinon ça peut être overkill.
+
+L'intérêt de Razor, c'est que c'est moins overkill pour des projets de taille pas trop grandes.
+
+Ce n'est qu'un choix. MVC est good aussi.
+
+Razor est + Page Focus, moins Model focus.
+
+Razor pages n'est pas exactement nouveau, pas trop à apprendre ! Car en fait Razor pages est build on top of MVC
+
+Rien de vraiment nouveau, juste une surcouche.
+
+Exemple, explorons la page Index.cshtml.
+
+==&gt; On peut voir le code behind Index.cshtml.cs, sur lequel je peux mettre une propriété qui pourra être accédée par la page Razor
+
+\(Razor c'est juste en fait le cshtml que l'on connait avec les @\* pour faire du csharp avec des html helper @HtmlHelper...\)
+
+Donc on n'a pas la "lourdeur" d'un controller qui doit renvoyer une ActionResult ...
+
+Juste du conde behind qui implémente une méthode OnGet\(\).
+
+"Code Behind ??? sound like WebForms ..."
+
+C'est un PageModel, il faut y penser comme "MVVM", 
+
+MVVM : Code associé avec le FrontEnd, il y a du ViewModel qu'on peut bind à l'UI.
+
+On ne connecte pas directement le backend Models. On a une page Models donc on set des propriétés à cette architecture orienté Page. comme du binding.
+
+Enfait le code behind d'une page comme Index :
+
+Index.cshtml : s'appue sur @model définir par une valeur.
+
+@model est défini dans Index.cshtml.cs :
+
+cette page est une classe IndexModel, celle-ci est un ViewModel qu'on peut personnalisé exactement à la page. On ne travaille pas directement avec le flow de Models. On a un ViewModel par défaut, avec un comportement OnGet qui va s'éxécuter quand les gens requiest la page Index, mais aussi des propriétés, des méthodes propres \(lié à l'UI bien sûre\).
+
+Le problème c'était que par abus, des développeurs passaient depuis le Controller directement un model métier pour l'UI, et non forcément un ViewModel. Là on aura plus tendance à de toute façon devoir construire un ViewModel. On ne travaille pas sur le Model, et on évite ce qui devient vite un projet désorganisé.
+
+Un seul Controller est créé par défaut ici : le AccountController.
+
+Autre truc avec le MVC qui peut être un peu lourd :
+
+Le controller pour AccountCOntroller par exemple : 
+
+Pour diriger vers la page ManageAccount, il va falloir créer une méthode public IActionResult ManageAccount\(\)
+
+Celle ci pour le Get
+
+Pour le Post, 
+
+il va falloir créer la même méthode IActionResult ManageAccount\(Account compte\)
+
+sauf qu'il sera décoré de \[HttpPost\].
+
+2 méthodes extrémement similaire visuellement mais qui n'ont pas dutout les mêmes fonctionnalitées.
+
+L'intérêt de Razor ici, c'est que dans le code behind \(Donc la classe ViewModel de la page\), il y a une méthode OnGet\(\) pour le Get, une méthode OnPost\(..\) pour le post, bien plus lisible
+
+Donc : 
+
+On va commencer par donner au projet .UI une référence sur le projet .BackService ...
+
+Ajout d'un foler dans le dossier Pages : Trips
+
+0:37:07
 
 
 
