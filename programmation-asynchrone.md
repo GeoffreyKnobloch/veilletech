@@ -50,7 +50,7 @@ async Task<int> AccessTheWebAsync()
 * Elle retourne un Type&lt;T&gt; et à la run return un T. \(pas de retour si retour est Task\)
 * L'idée est de faire un appel Asynchrone : client.GetStringAsync, qui va donc renvoyer un Task&lt;string&gt;.
 * En suite, continuer d'autres traitements indépendants de ce résultat. \(optionnel\)
-* puis obtenir le résultat de ce Task&lt;string&gt; grace au modifier await : string urlContent = await getStringTask
+* puis obtenir le résultat de ce Task&lt;string&gt; grace à l'opérateur await : string urlContent = await getStringTask
 
 Ce qui est intéressant dans ce process, c'est que l'appelant de la méthode asynchrone ne va pas stopper le thread d'exécution de l'appelant.
 
@@ -72,7 +72,21 @@ string url = await client.GetStringAsync\(\);
   * Task&lt;T&gt; si return T
   * Task si pas de return
   * void dans le cas d'un gestionnaire d'événements async.
-  * 
+* La méthode inclut généralement au moins une expression await, qui marque le point au-delà duquel la méthode ne peut pas poursuivre son exécution tant que l'opération asynchrone attendue n'est pas terminée. Dans le même temps, la méthode est interrompue, et le contrôle retourne à l'appelant de la méthode.
 
+Schèmas résumant l'ordre d'appel d'une méthode async :
 
+![](https://i-msdn.sec.s-msft.com/dynimg/IC612215.png)
+
+## En terme de thread
+
+Une méthode Async ne bloque pas le thread actuel pendant que la tâche attendue s'exécute. Au lieu de cela, elle rend le contrôle à l'appelant de la méthode Async.
+
+Les mots clés async et await n'entraînent pas la création de threads supplémentaires.
+
+Les méthodes Async ne requièrent pas de multithreading car une méthode async ne fonctionne pas sur son propre thread.
+
+La méthode s'exécute sur le contexte de synchronisation actuel et utilise du temps sur le thread uniquement lorsqu'elle est active.
+
+Il est possible d'utiliser Task.Run pour déplacer le travail lié au processeur vers un thread d'arrière-plan.
 
