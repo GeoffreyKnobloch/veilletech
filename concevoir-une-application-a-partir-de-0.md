@@ -119,11 +119,53 @@ Cette vidéo illustre la conception et le développement d'une application ASP .
 
   * Data annotation : préciser Key, Requiered, etc. Mais plutôt sur le ViewModel je pense. Sinon on peut override une méthode dans le TripContext qui à l'initiatlisation se lance, et qui précise que la clé primaire c'est l'id par exemple. Mais par convention si la propriété est écrie Id ou TypeId alors c'est directement reconnu comme étant l'Id par entity framework \(Convention over configuration\). et let Get\(Id\) peut s'écrire \_tripContext.Find\(id\) tout simplement, sans passer par Linq t =&gt; t.Id == id\)
 
-  * 1 h 48 : Voir lorsqu'il rend l'API Async pour ne pas avoir à attendre les Web Services.
+  * Possibilité de rendre son API asynchrone :
 
-## Troisième étape \(2h30 ?\)
+    * \[HttpGet\]
 
-Création d'un projet .net Standard TripTrackerDTO 
+    public async Task&lt;IActionResult&gt; GetAsync\(\)
+
+    {
+
+    var trips = await \_context.Trips.AsNoTracking\(\).ToListAsync\(\);
+
+    return Ok\(trips\);
+
+    }
+
+    AsNoTracking permet de gagner en performance car on ne garde pas les tracker objects dans notre contexte. On va throw le contexte direct aprés !
+
+    Meilleur façon que de répetter sans cesse la AsNoTracking lorsqu'on sait qu'on ne va pas conserver les objets tracker dans notre utilisation :
+
+    On peut modifier la classe TripContexte afin que lors de sa construction this.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+
+    Plutôt dans la classe qui accéde à sa DATA que là en fait.. Donc ici dans le controller.
+
+    EntityFramework add : context.Trips.Add\(value\); oucontext.Add\(value\) fonctionne également.context.SaveChanges\(\);
+
+    * dans le POST ici , juste aprés : if \(!ModelStats.IsValid\) return BadRequest\(ModelState\) sinon add et return Ok\(\); on retourne dans tous les cas une ActionResult.
+
+    * Update :context.Trips.Update\(value\);\_context.SaveChanges\(\);
+
+    * Delete : \[HttpDelete\("{id}"\] public IActionResulte Delete\(int id\) {
+
+    * var myTrip = context.Trips.Find\(id\); if \(myTrip == null\) return NotFound\(\); context.Trips.Remove\(myTrip\); context.SaveChanges\(\); return NoContent\(\);}
+
+    * Remarque : Le delete sur entity Framework n'est pas possible en une seule ligne : DELETE FROM TRIPS WHERE ID = id
+
+    * Donc Entity Framework n'est pas tres performant sur le delete. On peut imaginer une procédure stockée qui le fait ?
+
+    TripContext :
+
+    public void SeedData\(\) : Trips.AddRange\( ... va mettre 3 Trip en dur\)
+
+    Context.EnsureDbCreated
+
+  
+
+## Troisième étape : Création d'un projet DTO
+
+Création d'un projet .net Standard TripTrackerDTO \(Data Transfert Object\) sur lequel on copie l'intégralité des entity de l'API
 
 Pourquoi .net Standard ?
 
