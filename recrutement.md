@@ -1,24 +1,31 @@
 # Entretien technique
 
-## Entity Framework
+Document permettant de préparer le passage d'entretien techniques, selon le profil.
+
+## Candidat avec connaissance Entity Framework
 
 ### Delete
 
 #### Mise en place
 
-Comment met on en place la suppression d'une entité sur entity Framework ?
+Demander comment construire un delete à partir d'une id \(Question de base, assez simple\)
 
-Que penses-tu de la performance de ce code ?
+Amener le débat : Que penses tu de la performance ?
 
 #### Résultat attendu
 
-Le candidat montre qu'il sait faire le Delete.
+Peu performant, Entity Framework n'est pas capable d'écrire DELETE FROM TABLE WHERE ID = id : Un appel en base.
 
-Le candidat ne remet pas trop en question son code, mais identifie rapidement qu'entity Framework, pour delete, n'est pas capable d'éxécuter la simple commande DELETE FROM TABLE WHERE ID = Id
+Obligé de faire 2 appels en base.
 
-il est obligé de faire 2 requêtes.
+Le candidat doit être suffisament sûre de lui pour ne pas remettre en question son code lorsqu'on lui demande ce qu'il pense de la performance de ce qu'il vient d'écrire.
+
+Il doit en suite faire preuve de bon sens pour expliquer clairement en quoi ceci est une limite du framework Entity.
 
 #### Difficulté
 
-Facile si le candidat est sûre de lui
+Facile si le candidat est sûre de lui.
+
+  
+
 
