@@ -161,8 +161,6 @@ Cette vidéo illustre la conception et le développement d'une application ASP .
 
     Context.EnsureDbCreated
 
-  
-
 ## Troisième étape : Création d'un projet DTO
 
 Création d'un projet .net Standard TripTrackerDTO \(Data Transfert Object\) sur lequel on copie l'intégralité des entity de l'API
@@ -174,6 +172,48 @@ Pourquoi .net Standard ?
 * Définit un ensemble uniforme d’API de bibliothèque de classes de base pour toutes les implémentations de .NET à implémenter, indépendamment de la charge de travail.
 * Permet aux développeurs de générer des bibliothèques portables utilisables sur toutes les implémentations de .NET, à l’aide de ce même ensemble d’API.
 * Réduit ou même élimine une compilation conditionnelle de source partagée résultant des API .NET, uniquement pour les API de système d’exploitation.
+
+Pour ne pas avoir de code dupliqué, les entity de l'API deviennent des classes héritant simplement des entity \(copiées à 100%\) du DTO.
+
+Donc l'API référence le DTO.
+
+Dans le DTO on rajoute une classe : TripWithSegments qui hérite de Trip et qui rajoute en plus la liste de Segment
+
+ICollection&lt;Segment&gt; Segments
+
+Rapelle de la méthode Get :
+
+\[HttpGet\]
+
+public async Task&lt;IActionResult&gt; GetAsynd\(\)
+
+{
+
+var trips = await \_context.Trips.AsNoTracking\(\).ToListAsync\(\);
+
+return Ok\(trips\);
+
+}
+
+Trip ajoute également la List&lt;Segment&gt; Segments et dans la dal il fait un .Include\(t =&gt; t.Segments\) pour lire les segments en base aussi.
+
+Et il s'en sert pour .Select \( et recevoir des TripWithSegments.
+
+===&gt; Tout a fail avec ce conflit entre Trip et TripWithSegments ...
+
+Donc go back to la fin de la deuxieme étape. Suppression du projet DTO. Gros fail.
+
+\*\*\*\*\*\*\*\*\*\*\*\*\*
+
+Invitation de Jon Galloway.
+
+## Quatrième étape : Création de l'UI
+
+New Project /TripTracker.UI / ASP Web App \(Razor\) Authentication : Individual User Account \(Compliqué d'ajouter après\)
+
+Individual ou Work or School Account sont des options intéressantes.
+
+
 
 
 
