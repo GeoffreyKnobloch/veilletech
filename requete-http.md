@@ -155,7 +155,24 @@ Content-Length: nnn
 
 [https://www.getpostman.com/apps](https://www.getpostman.com/apps)
 
-// TODO : Expérimenter Postman
+* Installer
+* Entrer l'API EndPoint
+* Tester, ajouter des scripts pour automatiser
+
+Outre la possibilité d'automatiser, etc, cela permet de faire des requêtes avec la commande que l'on veut, le body est maîtrisé, l'url est choisie, ... et de voir le résultat.
+
+Un excellent outil lors que l'on travaille sur des API.
+
+### WorkSpace
+
+PostMan fonctionne par Workspaces. Mes workspaces personnels ainsi que ceux de ma team.
+
+Au sein d'un workspace il y a 2 choses Views :
+
+* Build ==&gt; Pour travailler au sein du workspace
+* Browse ==&gt; Pour organiser son contenu et ses membres
+
+
 
 ## Utilisation CRUD
 
@@ -171,6 +188,4 @@ Content-Length: nnn
 [https://github.com/Reactive-Extensions/Rx.NET](https://github.com/Reactive-Extensions/Rx.NET)
 
 // TODO : Explorer
-
-
 
