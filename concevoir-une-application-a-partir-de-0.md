@@ -312,6 +312,8 @@ Ajout d'un foler dans le dossier Pages : Trips
 
 =&gt; Va générer 5 pages dans le dossier Trips, en s'appuyant sur TripContext, ce qui n'est pas la solution finale, mais au moins on peut s'appuyer sur ce code auto généré pour l'adapter.
 
+#### Création du service qui consomme l'API : ApiClient
+
 En suite on va créer la classe dans le dossier Services qui va appeler la data.
 
 une interface :
@@ -332,19 +334,27 @@ Lorsque le service est terminé, il faut le référencer dans Startup.cs :
 
 // Configuration de l'API Client :
 
-            var httpClient = new HttpClient
+```
+        var httpClient = new HttpClient
 
-            {
+        {
 
-                BaseAddress = new Uri\(Configuration\["serviceUrl"\]\)
+            BaseAddress = new Uri\(Configuration\["serviceUrl"\]\)
 
-            };
+        };
 
 
 
-            services.AddSingleton\(httpClient\);
+        services.AddSingleton\(httpClient\);
 
-            services.AddSingleton&lt;IApiClient, ApiClient&gt;\(\);
+        services.AddSingleton&lt;IApiClient, ApiClient&gt;\(\);
+```
 
 Car l'API prend en constructeur un HttpClient donc il faut le référencer aussi !!!!! et on en profite pour prendre la main sur sa BaseAdresse qui sera configurable !
+
+#### Consommation de ce service par les Razor page
+
+
+
+
 
