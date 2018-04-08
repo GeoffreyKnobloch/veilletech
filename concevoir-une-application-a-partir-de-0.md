@@ -215,7 +215,7 @@ Individual ou Work or School Account sont des options intéressantes.
 
 ### Le choix d'un projet ASP Web App
 
-Il y a le choix pour l'UI : 
+Il y a le choix pour l'UI :
 
 * Application Web
 * Application Web \(Model-View-Controller\)
@@ -316,11 +316,19 @@ En suite on va créer la classe dans le dossier Services qui va appeler la data.
 
 une interface :
 
- IApiClient : Task&lt;List&lt;Trip&gt; GetTripAsync\(\)
+IApiClient : Task&lt;List&lt;Trip&gt; GetTripAsync\(\)
 
 Task&lt;Trip&gt; GetTripAsync\(\)
 
 et une classe ApiClient qui va implémenter ces méthodes.
+
+Pour implémenter ces méthodes, ApiClient utilise la classe HttpClient qui est la classe qui permet de lancer des requêtes et recevoir une réponse.
+
+Donc on a plus qu'à implémenter le CRUD de l'API REST en utilisant HttpClient.
+
+Comme l'API créée précédemment communique en Json pour le body des request, et que HttpClient.Read / Post / Delete / Put lisent des stream, on crée une extension de HttpClient afin d'implémenter ReadJson en extension.
+
+Lorsque le service est terminé, il faut le référencer dans Startup.cs.
 
 
 
