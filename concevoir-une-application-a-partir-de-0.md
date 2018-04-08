@@ -213,6 +213,21 @@ New Project /TripTracker.UI / ASP Web App \(pas la MVC\) \(Razor\) Authenticatio
 
 Individual ou Work or School Account sont des options intéressantes.
 
+### Le choix d'un projet ASP Web App
+
+Il y a le choix pour l'UI : 
+
+* Application Web
+* Application Web \(Model-View-Controller\)
+
+Nous avons fait ici le premier choix : Application Web : on va donc utiliser des pages Razor
+
+Dans le choix de MVC, on a Model, view , controller
+
+ici on a juste des PAGES razor, pas nécessairement de controller, qui sera plutôt remplacé par du code behind razor page.
+
+En MVC c'est du Razor aussi mais c'est des VIEWS
+
 DOnc on a :
 
 Dossier :
@@ -249,7 +264,7 @@ Juste du conde behind qui implémente une méthode OnGet\(\).
 
 "Code Behind ??? sound like WebForms ..."
 
-C'est un PageModel, il faut y penser comme "MVVM", 
+C'est un PageModel, il faut y penser comme "MVVM",
 
 MVVM : Code associé avec le FrontEnd, il y a du ViewModel qu'on peut bind à l'UI.
 
@@ -269,13 +284,15 @@ Un seul Controller est créé par défaut ici : le AccountController.
 
 Autre truc avec le MVC qui peut être un peu lourd :
 
-Le controller pour AccountCOntroller par exemple : 
+Le controller pour AccountCOntroller par exemple :
 
 Pour diriger vers la page ManageAccount, il va falloir créer une méthode public IActionResult ManageAccount\(\)
 
 Celle ci pour le Get
 
-Pour le Post, 
+Pour le Post,
+
+Le view model subit donc des adaptations suivant le OnGet, OnPost, etc.
 
 il va falloir créer la même méthode IActionResult ManageAccount\(Account compte\)
 
@@ -285,15 +302,25 @@ sauf qu'il sera décoré de \[HttpPost\].
 
 L'intérêt de Razor ici, c'est que dans le code behind \(Donc la classe ViewModel de la page\), il y a une méthode OnGet\(\) pour le Get, une méthode OnPost\(..\) pour le post, bien plus lisible
 
-Donc : 
-
-On va commencer par donner au projet .UI une référence sur le projet .BackService ...
+### Réalisation
 
 Ajout d'un foler dans le dossier Pages : Trips
 
-0:37:07
+=&gt; Créer une nouvelle page
 
+=&gt; En utilisant EntityFramework CRUD.
 
+=&gt; Va générer 5 pages dans le dossier Trips, en s'appuyant sur TripContext, ce qui n'est pas la solution finale, mais au moins on peut s'appuyer sur ce code auto généré pour l'adapter.
+
+En suite on va créer la classe dans le dossier Services qui va appeler la data.
+
+une interface :
+
+ IApiClient : Task&lt;List&lt;Trip&gt; GetTripAsync\(\)
+
+Task&lt;Trip&gt; GetTripAsync\(\)
+
+et une classe ApiClient qui va implémenter ces méthodes.
 
 
 
