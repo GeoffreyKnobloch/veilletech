@@ -328,7 +328,23 @@ Donc on a plus qu'à implémenter le CRUD de l'API REST en utilisant HttpClient.
 
 Comme l'API créée précédemment communique en Json pour le body des request, et que HttpClient.Read / Post / Delete / Put lisent des stream, on crée une extension de HttpClient afin d'implémenter ReadJson en extension.
 
-Lorsque le service est terminé, il faut le référencer dans Startup.cs.
+Lorsque le service est terminé, il faut le référencer dans Startup.cs :
+
+// Configuration de l'API Client :
+
+            var httpClient = new HttpClient
+
+            {
+
+                BaseAddress = new Uri\(Configuration\["serviceUrl"\]\)
+
+            };
 
 
+
+            services.AddSingleton\(httpClient\);
+
+            services.AddSingleton&lt;IApiClient, ApiClient&gt;\(\);
+
+Car l'API prend en constructeur un HttpClient donc il faut le référencer aussi !!!!! et on en profite pour prendre la main sur sa BaseAdresse qui sera configurable !
 
