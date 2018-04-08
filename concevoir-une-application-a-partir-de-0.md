@@ -360,6 +360,12 @@ Donc chaque Razor Page va travailler sur un ApiClient \_client privé qui va fai
 
 #### Sécurisation via authentification
 
+On a créé le projet Razor Pages en incluant l'authentification Individual User Account.
+
+Nous allons exploiter ça.
+
+4:43:50
+
 
 
 
