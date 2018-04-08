@@ -358,5 +358,9 @@ Les Razor page sont créées par défaut pour consommer un DbContext directement
 
 Donc chaque Razor Page va travailler sur un ApiClient \_client privé qui va faire les appels pour retrouver les Models.
 
+#### Sécurisation via authentification
+
+
+
 
 
