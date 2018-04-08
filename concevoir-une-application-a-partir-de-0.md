@@ -364,9 +364,41 @@ On a créé le projet Razor Pages en incluant l'authentification Individual User
 
 Nous allons exploiter ça.
 
-4:43:50
+Par défaut, tout est fonctionnel, et tout reste personnalisable.
+
+Dans Startup, on peut constater que des RazorPagesOptions peuvent être spécifiées pour authoriser certaines pages.
+
+Authorizer ==&gt; uniquement pour personne connectée.
+
+La deuxième façon de prévenir l'accés par personne non connectée est \[Authorize\] sur les vm.
+
+On peut également conditionner l'affichage de certaines choses avec @SignInManager.IsSignedIn\(User\)
+
+On peut aussi conditionner avec des Policy custom.
+
+Par exemple \(juste pour voir la possibilité, à ne pas imioter dans un code de production\) :
+
+Dans Configure de Startup.cs :
+
+services.AddAuthorization\(configure =&gt;
+
+{
+
+configure.AddPolicy\("CreateTrips", policy =&gt;
+
+{
+
+policy.RequireUserName\("Geoffrey@gmail.com"\).Build\(\);
+
+}\)
+
+}\);
 
 
 
+Mieux : Role.
 
+Mieux que Role : Claimed car Role manque encore de Granularité
+
+Le mieux c'est donc du "CanPublish" ou "CanDoThat" granularisé et géré en dehors de l'application.
 
