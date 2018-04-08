@@ -394,11 +394,13 @@ policy.RequireUserName\("Geoffrey@gmail.com"\).Build\(\);
 
 }\);
 
-
-
 Mieux : Role.
 
 Mieux que Role : Claimed car Role manque encore de Granularité
 
 Le mieux c'est donc du "CanPublish" ou "CanDoThat" granularisé et géré en dehors de l'application.
+
+05:16 \(heure de sa pause sandwich.\)
+
+
 
