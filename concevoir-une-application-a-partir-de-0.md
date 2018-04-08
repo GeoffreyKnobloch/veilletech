@@ -354,7 +354,9 @@ Car l'API prend en constructeur un HttpClient donc il faut le référencer aussi
 
 #### Consommation de ce service par les Razor page
 
+Les Razor page sont créées par défaut pour consommer un DbContext directement \(!!\) il suffit donc de faire les modifications nécessaires, pour ne plus travailler sur ce  dbContext avec Entity Framework, mais plutôt pour faire des appels à l'API, et plus directement au service ClientApi.
 
+Donc chaque Razor Page va travailler sur un ApiClient \_client privé qui va faire les appels pour retrouver les Models.
 
 
 
