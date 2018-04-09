@@ -460,7 +460,7 @@ Nommé DangerTagHelper ici car on va créer un tag helper Danger pour afficher u
 
 Par défaut, la classe est faite pour être appelée suivant un tag-name :
 
- \[HtmlTargetElement\("tag-name"\)\]
+\[HtmlTargetElement\("tag-name"\)\]
 
 On change ici pour     \[HtmlTargetElement\(Attributes = "danger"\)\]
 
@@ -473,4 +473,8 @@ Ici le tag helper va modifier l'attribut classe de la balise pour y ajouter text
 devient alors :
 
 &lt;div asp-validation-summary="ModelOnly" danger="" &gt;&lt;/div&gt;
+
+
+
+C'est lourd d'écrire en c\# ses propres tag, mais ça veut aussi dire qu'on peut import un package nuget ou partager ce travail entre les projets ...
 
