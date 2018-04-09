@@ -400,7 +400,31 @@ Mieux que Role : Claimed car Role manque encore de Granularité
 
 Le mieux c'est donc du "CanPublish" ou "CanDoThat" granularisé et géré en dehors de l'application.
 
-05:16 \(heure de sa pause sandwich.\)
+Area : [https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/areas](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/areas)
+
+Notion avancée de ASP pour travailler sur des controllers ayant le même nom.
+
+Exemple :
+
+Dossier Areas / Admin / Controllers
+
+\[Area\("Admin"\)\]
+
+puis le controller AccountController décoré par Area\("admin"\)
+
+## 5 éme étape : UI Component réutilisable
+
+Reprend que à 6:13 \(Depuis 5:30 c'est trash\)
+
+L'idée est d'encapsuler / factoriser des composants visuels.
+
+Pages/ Ajouter un dossier "ViewComponents" / Ajouter Dossier "Trips" / Ajouter Razor Page : non car en fait c une page partial 
+
+==&gt; Ajout component Razor view appelée Edit
+
+@model TripTracker.BackServices.Models.Trip
+
+
 
 
 
