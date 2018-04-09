@@ -418,13 +418,25 @@ Reprend que à 6:13 \(Depuis 5:30 c'est trash\)
 
 L'idée est d'encapsuler / factoriser des composants visuels.
 
-Pages/ Ajouter un dossier "ViewComponents" / Ajouter Dossier "Trips" / Ajouter Razor Page : non car en fait c une page partial 
+Pages/ Ajouter un dossier "ViewComponents" / Ajouter Dossier "Trips" / Ajouter Razor Page : non car en fait c une page partial
 
 ==&gt; Ajout component Razor view appelée Edit
 
 @model TripTracker.BackServices.Models.Trip
 
+L'idée c'est d'appeler : @await Component.InvokeAsync\("EditTrip", Model.Trip\)
 
+Qui va avoir pour effet d'appeler EditTripViewComponent dans le dossier ViewComponent à la racine du projet.
 
+InvokeAsync va return View&lt;Trip&gt;\("Edit", trip\); qui a avoir pour effet de rechercher  : 
 
+/Pages/Trips/Components/EditTrip/Edit.cshtml
+
+/Pages/Components/EditTrip/Edit.cshtml
+
+/Views/Shared/Components/EditTrip/Edit.cshtml
+
+Dans le cas exemple, on l'a placé ici : /pages/Components/EditTrip/Edit.cshtml.
+
+Honnêtement, c'est du convention over paramètrage, mais cela ne s'invente pas, en respectant la convention, on appelle relativement facilement la View, mais il faut bien respecter la convention, en s'appuyant sur un exemple il n'y a pas de difficulté.
 
