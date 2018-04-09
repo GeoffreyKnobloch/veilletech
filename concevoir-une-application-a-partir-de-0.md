@@ -474,7 +474,11 @@ devient alors :
 
 &lt;div asp-validation-summary="ModelOnly" danger="" &gt;&lt;/div&gt;
 
-
-
 C'est lourd d'écrire en c\# ses propres tag, mais ça veut aussi dire qu'on peut import un package nuget ou partager ce travail entre les projets ...
+
+## Cinquième étape : Déploiement avec Docker
+
+06:58 ==&gt; Arrive de @spboyer pour le dernier module.
+
+
 
