@@ -446,7 +446,9 @@ Heureusement, on peut utiliser un "tag helper" :
 
 Mieux d'utiliser &lt;vc: pour accéder aux ViewControllers, \(en s'assurant d'avoir dans \_ViewImports : @addTagHelper \*, TripTracker.UI
 
-            &lt;vc:edit-trip trip="Model.Trip"&gt;&lt;/vc:edit-trip&gt;
+```
+        &lt;vc:edit-trip trip="Model.Trip"&gt;&lt;/vc:edit-trip&gt;
+```
 
 #### Création d'un Tag Helper
 
@@ -456,5 +458,19 @@ Ajouter nouvelle Tag Helper Class
 
 Nommé DangerTagHelper ici car on va créer un tag helper Danger pour afficher un danger.
 
+Par défaut, la classe est faite pour être appelée suivant un tag-name :
 
+ \[HtmlTargetElement\("tag-name"\)\]
+
+On change ici pour     \[HtmlTargetElement\(Attributes = "danger"\)\]
+
+et le tag helper a une action limitée à la balise qui l'appelle entre &lt; et &gt;.
+
+Ici le tag helper va modifier l'attribut classe de la balise pour y ajouter text-danger.
+
+&lt;div asp-validation-summary="ModelOnly" class="text-danger"&gt;&lt;/div&gt;
+
+devient alors :
+
+&lt;div asp-validation-summary="ModelOnly" danger="" &gt;&lt;/div&gt;
 
