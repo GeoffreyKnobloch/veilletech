@@ -412,7 +412,7 @@ Dossier Areas / Admin / Controllers
 
 puis le controller AccountController décoré par Area\("admin"\)
 
-## 5 éme étape : UI Component réutilisable
+#### Factoriser en UI Component réutilisable
 
 Reprend que à 6:13 \(Depuis 5:30 c'est trash\)
 
@@ -428,7 +428,7 @@ L'idée c'est d'appeler : @await Component.InvokeAsync\("EditTrip", Model.Trip\)
 
 Qui va avoir pour effet d'appeler EditTripViewComponent dans le dossier ViewComponent à la racine du projet.
 
-InvokeAsync va return View&lt;Trip&gt;\("Edit", trip\); qui a avoir pour effet de rechercher  : 
+InvokeAsync va return View&lt;Trip&gt;\("Edit", trip\); qui a avoir pour effet de rechercher  :
 
 /Pages/Trips/Components/EditTrip/Edit.cshtml
 
@@ -439,4 +439,22 @@ InvokeAsync va return View&lt;Trip&gt;\("Edit", trip\); qui a avoir pour effet d
 Dans le cas exemple, on l'a placé ici : /pages/Components/EditTrip/Edit.cshtml.
 
 Honnêtement, c'est du convention over paramètrage, mais cela ne s'invente pas, en respectant la convention, on appelle relativement facilement la View, mais il faut bien respecter la convention, en s'appuyant sur un exemple il n'y a pas de difficulté.
+
+L'appel @await Component.InvokeAsync\("EditTrip", Model.Trip\) dans la razor page ... semble stupide.
+
+Heureusement, on peut utiliser un "tag helper" :
+
+Mieux d'utiliser &lt;vc: pour accéder aux ViewControllers, \(en s'assurant d'avoir dans \_ViewImports : @addTagHelper \*, TripTracker.UI
+
+            &lt;vc:edit-trip trip="Model.Trip"&gt;&lt;/vc:edit-trip&gt;
+
+#### Création d'un Tag Helper
+
+Créer un nouveau dossier à la racine du projet UI : TagHelpers
+
+Ajouter nouvelle Tag Helper Class
+
+Nommé DangerTagHelper ici car on va créer un tag helper Danger pour afficher un danger.
+
+
 
