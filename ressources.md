@@ -4,6 +4,8 @@
 * Clean Code \(PM me sur Linkedin ~~pour obtenir une copie digitale~~, mon lien linkedin est sur la page d'introduction.\)
 * [https://mva.microsoft.com/](https://mva.microsoft.com/) ==&gt; ASP.NET Core Beginner / Advanced / Intermediate conseillé par Jon Galloway et csharpfritz.
 * [https://www.reddit.com/r/WatchPeopleCode/](https://www.reddit.com/r/WatchPeopleCode/) 
+* [https://www.twitch.tv/csharpfritz](https://www.twitch.tv/csharpfritz)
+* [https://mva.microsoft.com/search/SearchResults.aspx\#!q=ASP.NET%20Core](https://mva.microsoft.com/search/SearchResults.aspx#!q=ASP.NET%20Core)
 
 
 
