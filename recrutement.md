@@ -8,6 +8,7 @@ Document permettant de préparer le passage d'entretien techniques, selon le pro
 * Peux tu écrire ta propre using reflexion ?
 * Sais tu manipuler IEnumerable avec LINQ ?
 * Quelle est ton expérience avec les database ? Sais tu écrire une requête ? jointure ?
+* Pour toute question non connue : Et donc tu ferais comment si tu devais le faire demain ? \(réponse attendue : Je cherche, j'apprend, et je le fais : Autonomie, curiosité, professionalisme.\)
 
 ## Candidat avec connaissance Entity Framework
 
