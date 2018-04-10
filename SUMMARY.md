@@ -9,7 +9,7 @@
     * [Visitor](dotnet/design-pattern/behavorial-patterns/visitor.md)
     * [Command](dotnet/design-pattern/behavorial-patterns/command.md)
   * [Structural Patterns](dotnet/design-pattern/structural-patterns.md)
-    * [Proxy](dotnet/design-pattern/structural-patterns/proxy.md)
+    * [Data Transfer Object](dotnet/design-pattern/structural-patterns/data-transfer-object.md)
 * [framework .net](dotnet/versions-du-framework.md)
 * [Utilitaire](utilitaire.md)
 * [Conception ASP .net Core](concevoir-une-application-a-partir-de-0.md)
