@@ -20,3 +20,5 @@ Pour mettre en place l'intégration continue, nous nous appuierons sur cette sou
 
 Nous utiliserons VSTS comme service Git.
 
+// TODO : Continuer ça. Sachant que je pense que mon projet TrickTracker fera tout à fait l'affaire.
+
