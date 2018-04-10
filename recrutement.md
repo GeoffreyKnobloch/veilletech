@@ -2,6 +2,13 @@
 
 Document permettant de préparer le passage d'entretien techniques, selon le profil.
 
+## Questions général pour candidat ASP .Net
+
+* Comment utiliser les controllers ?
+* Peux tu écrire ta propre using reflexion ?
+* Sais tu manipuler IEnumerable avec LINQ ?
+* Quelle est ton expérience avec les database ? Sais tu écrire une requête ? jointure ?
+
 ## Candidat avec connaissance Entity Framework
 
 ### Delete
@@ -26,15 +33,7 @@ Il doit en suite faire preuve de bon sens pour expliquer clairement en quoi ceci
 
 Facile si le candidat est sûre de lui.
 
-## Candidat ASP .Net
-
-Source : [https://stackify.com/asp-net-interview-questions-hiring-tips/](https://stackify.com/asp-net-interview-questions-hiring-tips/)
-
-Voir l'article mais aussi la réponse.
-
-
-
-
+## 
 
 
 
