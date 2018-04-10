@@ -2,6 +2,8 @@
 
 Source : [https://www.twitch.tv/videos/229614321](https://www.twitch.tv/videos/229614321)
 
+Application construite en suivant cette vidéo : 
+
 Cette vidéo illustre la conception et le développement d'une application ASP .NET CORE en 8 heures par @csharpfritz featuring @spboyer
 
 ## **Premièrement, on conçoit l'API de l'application \(Bien séparer le back du \(des ?\) front\)**
@@ -491,10 +493,4 @@ Pas d'utilisation de Kubernete.
 Avant d'utiliser quoi que ce soit de docker, pour le moment on ajoute docker au projet BackService.
 
 ça rajoute un docker compose, et un dockerfile dans le projet backservice ...
-
-
-
-
-
-
 
