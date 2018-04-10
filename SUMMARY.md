@@ -12,11 +12,12 @@
     * [Data Transfer Object](dotnet/design-pattern/structural-patterns/data-transfer-object.md)
 * [Utilitaire](utilitaire.md)
 * [framework .net](dotnet/versions-du-framework.md)
-* [Conception ASP .net Core](concevoir-une-application-a-partir-de-0.md)
 * [Requête Http](requete-http.md)
 * [Entretien technique](recrutement.md)
 * [Ressources](ressources.md)
 * [Programmation asynchrone](programmation-asynchrone.md)
 * [Caching en ASP .net](caching-en-asp-net.md)
 * [Architecture](architecture.md)
+* [ASP .NET Core 2.0](asp-net-core-20.md)
+  * [Conception de A à Z](asp-net-core-20/conception-de-a-a-z.md)
 

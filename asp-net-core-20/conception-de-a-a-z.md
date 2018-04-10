@@ -18,8 +18,9 @@ Cette vidéo illustre la conception et le développement d'une application ASP .
 
   * Dossier Models pour ajouter les entity POCO :
 
-    * Trip.csId : int
+    * Trip.cs
 
+      * Id : int
       * Name : str
       * StartDate : DateTimeOffset ==&gt; Car ça va stocker la timeZone
 
