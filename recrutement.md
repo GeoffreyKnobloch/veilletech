@@ -1,6 +1,6 @@
 # Entretien technique
 
-Document permettant de préparer le passage d'entretien techniques, selon le profil.
+Document permettant de faire passer des entretiens techniques, selon le profil.
 
 ## Questions général pour candidat ASP .Net
 
