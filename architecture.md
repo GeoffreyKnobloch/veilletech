@@ -10,18 +10,14 @@ Exemple du retail :
 
 ![](/assets/screencapture-developers-kiabi-fr-2018-04-10-11_20_52.png)
 
-### ![](/assets/screencapture-developers-kiabi-fr-2018-04-10-11_20_52.png)Pour chaque API, architecture DMC sur un seul projet
-
-DataLayer :
-
-Couche d'accès à la base de donnée
-
-
+### ![](/assets/screencapture-developers-kiabi-fr-2018-04-10-11_20_52.png)Pour chaque API, architecture "MC" sur un seul projet
 
 Model :
 
 * Ensemble de BOs correspondants au métier de l'API qui correspondent aux tables de la bdd.
 * Ensemble de DTOs correspondants chacun à un BO. \(n DTOs pour un BO\). \(un BO peut être un DTO\)
+* Data acces
+* Traduction data acces en DTO
 
 Controller :
 
