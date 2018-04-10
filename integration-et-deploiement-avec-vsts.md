@@ -8,7 +8,7 @@ Explication de l'objectif : [https://www.visualstudio.com/team-services/continuo
 
 Déployer sur Azure Web App :
 
- [https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/deploy-webdeploy-webapps?view=vsts](https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/deploy-webdeploy-webapps?view=vsts)
+[https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/deploy-webdeploy-webapps?view=vsts](https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/deploy-webdeploy-webapps?view=vsts)
 
 ## Mise en place d'un build CI
 
@@ -18,5 +18,5 @@ Pour mettre en place l'intégration continue, nous nous appuierons sur cette sou
 
 [https://docs.microsoft.com/en-us/vsts/build-release/apps/aspnet/build-aspnet-core?view=vsts&tabs=gitvsts%2Cweb%2Cdeploy-windows](https://docs.microsoft.com/en-us/vsts/build-release/apps/aspnet/build-aspnet-core?view=vsts&tabs=gitvsts%2Cweb%2Cdeploy-windows)
 
-
+Nous utiliserons VSTS comme service Git.
 
