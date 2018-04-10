@@ -478,7 +478,23 @@ C'est lourd d'écrire en c\# ses propres tag, mais ça veut aussi dire qu'on peu
 
 ## Cinquième étape : Déploiement avec Docker
 
-06:58 ==&gt; Arrive de @spboyer pour le dernier module.
+Ce qui serait bien, ce serait de publier l'API à part pour pouvoir là partager.Ce n'est pas ce que l'on fait aujourd'hui -\_-
+
+Docker for windows require windows Pro
+
+Ducoup installation docker toolbox.
+
+Pas d'utilisation de Kubernete.
+
+1ere chose : définir les limites de l'app.
+
+Avant d'utiliser quoi que ce soit de docker, pour le moment on ajoute docker au projet BackService.
+
+ça rajoute un docker compose, et un dockerfile dans le projet backservice ...
+
+
+
+
 
 
 
