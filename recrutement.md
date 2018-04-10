@@ -26,6 +26,15 @@ Il doit en suite faire preuve de bon sens pour expliquer clairement en quoi ceci
 
 Facile si le candidat est sûre de lui.
 
-  
+## Candidat ASP .Net
+
+Source : [https://stackify.com/asp-net-interview-questions-hiring-tips/](https://stackify.com/asp-net-interview-questions-hiring-tips/)
+
+Voir l'article mais aussi la réponse.
+
+
+
+
+
 
 
