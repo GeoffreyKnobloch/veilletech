@@ -47,5 +47,18 @@ En utilisant un Hosted Agent, Windows prend en charge sa maintenance et ses mise
 
 Une bonne idée est d'essayer cette solution dans un premier temps. Si cela ne fonctionne pas, il faudra faire son propre agent privé.
 
+Pour sélectionner un Agent hébergé, cela se fait lors de l'édition de la définition de Build :
+
+Ici même dans VSTS : [https://docs.microsoft.com/en-us/vsts/build-release/actions/ci-cd-part-1?view=vsts\#create-a-build-definition](https://docs.microsoft.com/en-us/vsts/build-release/actions/ci-cd-part-1?view=vsts#create-a-build-definition)
+
+Lors de la sélection de Agent Queue, il est possible de sélectionner un des Hosted Agent suivant :
+
+* Hosted VS2017 \(si l'équipe utilise VS2017\)
+* Hosted Linux
+* Hosted macOS Preview
+* Hosted \(si l'équipe utilise Visual Studio 2013 ou 2015\)
+
+Dans notre cas, nous sélectionnerons Hosted VS2017.
+
 
 
