@@ -3,7 +3,7 @@
 Sources :
 
 * [https://fr.wikipedia.org/wiki/Devops](https://fr.wikipedia.org/wiki/Devops)
-* [https://fr.wikipedia.org/wiki/Cha%C3%AEne\_d%27outils\_Devops](https://fr.wikipedia.org/wiki/Chaîne_d'outils_Devops)
+* [https://fr.wikipedia.org/wiki/Cha%C3%AEne\_d%27outils\_Devops](https://fr.wikipedia.org/wiki/Cha%C3%AEne_d%27outils_Devops)
 
 ## Définition
 
@@ -57,6 +57,4 @@ Sanjeev Sharma et Bernie Coyne recommandent, pour répondre à ces capabilities 
 ## Chaîne d'outil DevOps
 
 Plan - Create - Verify - Package - Release - Configure - Monitor - Repeat
-
-
 
