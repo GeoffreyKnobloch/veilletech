@@ -11,7 +11,7 @@ Déployer sur Azure Web App :
 1. [https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/deploy-webdeploy-webapps?view=vsts](https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/deploy-webdeploy-webapps?view=vsts) : Pour le déploiement sur Azure Web App. On se basera d'abord sur cette source.
 2. [https://docs.microsoft.com/en-us/vsts/build-release/actions/ci-cd-part-1?view=vsts](https://docs.microsoft.com/en-us/vsts/build-release/actions/ci-cd-part-1?view=vsts) Pour le déploiement d'un Hello World !. On pourra utiliser cette source pour la mise en pratique \(ou cliquer concrètement sur VSTS ..\)
 
-## Mise en place d'un build d'intégration continue
+## Mise en place d'une build d'intégration continue
 
 Nous allons dans un premier temps mettre en place l'intégration continue afin d'avoir un build Continuous Integration qui publie un package Web Deploy pour notre application .NETCore.
 
@@ -61,6 +61,32 @@ Lors de la sélection de Agent Queue, il est possible de sélectionner un des Ho
 Dans notre cas, nous sélectionnerons Hosted VS2017.
 
 ##### Agent privé
+
+Dans le cas ou les Hosted Agent mis à disposition par Microsoft ne conviennent pas \(voir leurs limites dans la source du paragraphe Agent hébergé\), il est possible de mettre en place soi-même un agent privé pour run les jobs de déploiement et de build.
+
+Cela permet de controller l'installation de software nécessaire pour les builds et deployments.
+
+Il est possible d'installer un agent sur Windows, Linux, macOS, et même un Linux Docker container.
+
+Après avoir installé son agent privé sur une machine, il est possible d'installer n'importe quelle software sur cette machine requis par nos jobs de build et de déploiement.
+
+Microsoft recommande l'utilisation d'un Hosted Agent si notre code est sur VSTS.
+
+##### Capabilities
+
+Chaque agent a une liste de Capabilities \(capcitées\). Les Capabilites sont des paires nom-valeur qui sont :
+
+* découverte par le logiciel Agent : system capabilities \(capcitées system\)
+* définies par l'utilisateur : user capabilities
+
+Le logiciel Agent détermine automatiquement diverses system capabilities comme :
+
+* Nom de la machine
+* Type d'OS
+* Version de certains logiciels installés sur la machine
+* Les variables d'environnements définis dans la machine apparaissent automatiquement dans la liste de system capabilities
+
+
 
 
 
