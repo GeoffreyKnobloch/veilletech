@@ -8,7 +8,8 @@ Explication de l'objectif : [https://www.visualstudio.com/team-services/continuo
 
 Déployer sur Azure Web App :
 
-[https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/deploy-webdeploy-webapps?view=vsts](https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/deploy-webdeploy-webapps?view=vsts)
+1. [https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/deploy-webdeploy-webapps?view=vsts](https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/deploy-webdeploy-webapps?view=vsts) : Pour le déploiement sur Azure Web App. On se basera d'abord sur cette source.
+2. [https://docs.microsoft.com/en-us/vsts/build-release/actions/ci-cd-part-1?view=vsts](https://docs.microsoft.com/en-us/vsts/build-release/actions/ci-cd-part-1?view=vsts) Pour le déploiement d'un Hello World !. On pourra utiliser cette source pour la mise en pratique \(ou cliquer concrètement sur VSTS ..\)
 
 ## Mise en place d'un build d'intégration continue
 
@@ -34,7 +35,17 @@ Pour build le code ou déployer le logiciel, il est nécessaire d'avoir au moins
 
 Lors du build ou du déploiement, le système démarre un ou plus **jobs**.** **
 
-**Un agent est un logiciel installable qui exécute un job de build ou de déploiement à la fois.**
+_**Un agent est un logiciel installable qui exécute un job de build ou de déploiement à la fois.**_
+
+##### Agent hébergé \(Hosted Agent\)
+
+Source : [https://docs.microsoft.com/en-us/vsts/build-release/concepts/agents/hosted?view=vsts](https://docs.microsoft.com/en-us/vsts/build-release/concepts/agents/hosted?view=vsts)
+
+En travaillant avec VSTS, une option confortable pour build et deploy est d'utiliser un Hosted Agent.
+
+En utilisant un Hosted Agent, Windows prend en charge sa maintenance et ses mises à jour. Pour beaucoup d'équipes, c'est la façon la plus simple d'assurer le Build et le Deploy.
+
+Une bonne idée est d'essayer cette solution dans un premier temps. Si cela ne fonctionne pas, il faudra faire son propre agent privé.
 
 
 
