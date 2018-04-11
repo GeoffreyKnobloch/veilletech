@@ -1,6 +1,9 @@
 # DevOps
 
-Source : [https://fr.wikipedia.org/wiki/Devops](https://fr.wikipedia.org/wiki/Devops)
+Sources :
+
+* [https://fr.wikipedia.org/wiki/Devops](https://fr.wikipedia.org/wiki/Devops)
+* [https://fr.wikipedia.org/wiki/Cha%C3%AEne\_d%27outils\_Devops](https://fr.wikipedia.org/wiki/Cha%C3%AEne_d%27outils_Devops)
 
 ## Définition
 
@@ -27,7 +30,7 @@ La méthode DevOps est une des quatre nouvelles tendances de l'agilité : la pra
 * Scrum Master
 * Rétrospectives des Sprint
 
-La méthode DevOps assure l'**ITSM** \(IT Service Management\), une des bases de l'ITIL \(IT Infrastructure Library\) : identifier un ensemble de **capabilities **\(Capacitées organisationnelles\)  à fournir au client sous forme de services. La capabilities est assurée par les **functions **\(équipes techniques, spéciastes, et processus répondant au besoin\). 
+La méthode DevOps assure l'**ITSM** \(IT Service Management\), une des bases de l'ITIL \(IT Infrastructure Library\) : identifier un ensemble de **capabilities **\(Capacitées organisationnelles\)  à fournir au client sous forme de services. La capabilities est assurée par les **functions **\(équipes techniques, spéciastes, et processus répondant au besoin\).
 
 Les capabilities auquel répond DevOps sont : \(_les functions sont mes propres suggestions_\)
 
@@ -45,7 +48,7 @@ Ingénieur\(s\) DevOps + Processus
 Sanjeev Sharma et Bernie Coyne recommandent, pour répondre à ces capabilities :
 
 * Un déploiement régulier des applications, la seule répétition contribuant à fiabiliser le processus
-* Un décalage des tests « vers la gauche », autrement dit de tester au plus tôt
+* Un décalage des tests « vers la gauche », autrement dit de tester au plus tôt
 * Une pratique des tests dans un environnement similaire à celui de production
 * Une intégration continue incluant des tests continus
 * Une boucle d'amélioration courte \(i.e. un feed-back rapide des utilisateurs\)
