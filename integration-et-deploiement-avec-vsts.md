@@ -86,7 +86,5 @@ Le logiciel Agent détermine automatiquement diverses system capabilities comme 
 * Version de certains logiciels installés sur la machine
 * Les variables d'environnements définis dans la machine apparaissent automatiquement dans la liste de system capabilities
 
-
-
-
+Lorsque l'on crée une builde ou release definition, ou lorsque l'on queue une build ou déploiement, 
 
