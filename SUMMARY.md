@@ -21,5 +21,6 @@
 * [ASP .NET Core 2.0](asp-net-core-20.md)
   * [Conception de A à Z](asp-net-core-20/conception-de-a-a-z.md)
 * [Microsoft Azure](microsoft-azure.md)
-* [Integration et Deploiement](integration-et-deploiement-avec-vsts.md)
+* [Intégration et Déploiement](integration-et-deploiement-avec-vsts.md)
+* [DevOps](devops.md)
 
