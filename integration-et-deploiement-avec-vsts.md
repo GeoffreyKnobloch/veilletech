@@ -60,5 +60,7 @@ Lors de la sélection de Agent Queue, il est possible de sélectionner un des Ho
 
 Dans notre cas, nous sélectionnerons Hosted VS2017.
 
+##### Agent privé
+
 
 
