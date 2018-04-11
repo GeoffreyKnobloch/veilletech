@@ -3,7 +3,7 @@
 Sources :
 
 * [https://fr.wikipedia.org/wiki/Devops](https://fr.wikipedia.org/wiki/Devops)
-* [https://fr.wikipedia.org/wiki/Cha%C3%AEne\_d%27outils\_Devops](https://fr.wikipedia.org/wiki/Cha%C3%AEne_d%27outils_Devops)
+* [https://fr.wikipedia.org/wiki/Cha%C3%AEne\_d%27outils\_Devops](https://fr.wikipedia.org/wiki/Chaîne_d'outils_Devops)
 
 ## Définition
 
@@ -53,6 +53,10 @@ Sanjeev Sharma et Bernie Coyne recommandent, pour répondre à ces capabilities 
 * Une intégration continue incluant des tests continus
 * Une boucle d'amélioration courte \(i.e. un feed-back rapide des utilisateurs\)
 * Une surveillance étroite de l'exploitation et de la qualité de production factualisée par des métriques et indicateurs clés.
+
+## Chaîne d'outil DevOps
+
+Plan - Create - Verify - Package - Release - Configure - Monitor - Repeat
 
 
 
