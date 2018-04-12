@@ -14,7 +14,7 @@ Geoffrey Knobloch, Ingénieur concepteur développeur .NET, enthousiaste des té
 
 ![](/assets/MHdWKUj__100x100_02.jpg)
 
-### Me contacter sur :
+### Contact :
 
 [Linkedin](https://www.linkedin.com/in/geoffreyknobloch/ "Linkedin") : GeoffreyKnobloch
 
