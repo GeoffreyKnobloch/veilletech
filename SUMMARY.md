@@ -14,7 +14,6 @@
 * [framework .net](dotnet/versions-du-framework.md)
 * [Requête Http](requete-http.md)
 * [Entretien technique](recrutement.md)
-* [Ressources](ressources.md)
 * [Programmation asynchrone](programmation-asynchrone.md)
 * [Caching en ASP .net](caching-en-asp-net.md)
 * [Architecture](architecture.md)
@@ -23,4 +22,5 @@
 * [Microsoft Azure](microsoft-azure.md)
 * [Intégration et Déploiement](integration-et-deploiement-avec-vsts.md)
 * [DevOps](devops.md)
+* [Ressources](ressources.md)
 
