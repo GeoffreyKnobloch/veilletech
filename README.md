@@ -8,9 +8,11 @@ Les solutions choisies pour un thème donné sont globalements orientés vers le
 
 C\# pour langage, .NET Core ou .NET Framework pour framework, Visual Studio pour IDE, VSTS pour service Git et pour l'intégration et le déploiement continu en mode DevOps, ...
 
-## A propos :
+## A propos de l'auteur:
 
+Geoffrey Knobloch, développeur .NET, enthousiaste des téchnologies Microsoft, des bonnes practices en matière de qualité du code, d'organisation et de management d'équipes IT.
 
+![](/assets/MHdWKUj__400x400.jpg)
 
 ### Me contacter sur :
 
@@ -18,5 +20,5 @@ C\# pour langage, .NET Core ou .NET Framework pour framework, Visual Studio pour
 
 [Twitter](https://twitter.com/Jofdotnet "Twitter"): @Jofdotnet
 
-
+[GitHub](https://github.com/GeoffreyKnobloch) : GeoffreyKnobloch
 
