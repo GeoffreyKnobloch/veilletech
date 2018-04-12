@@ -12,6 +12,8 @@ C\# pour langage, .NET Core ou .NET Framework pour framework, Visual Studio pour
 
 Geoffrey Knobloch, Ingénieur concepteur développeur .NET, enthousiaste des téchnologies Microsoft, des bonnes practices en matière de qualité du code, d'organisation et de management d'équipes IT.
 
+![](/assets/MHdWKUj__100x100_02.jpg)
+
 ### Me contacter sur :
 
 [Linkedin](https://www.linkedin.com/in/geoffreyknobloch/ "Linkedin") : GeoffreyKnobloch
