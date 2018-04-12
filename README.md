@@ -8,13 +8,13 @@ Les solutions choisies pour un thème donné sont globalements orientés vers le
 
 C\# pour langage, .NET Core ou .NET Framework pour framework, Visual Studio pour IDE, VSTS pour service Git et pour l'intégration et le déploiement continu en mode DevOps, ...
 
-## A propos de l'auteur:
+## A propos de l'auteur
 
 Geoffrey Knobloch, Ingénieur concepteur développeur .NET, enthousiaste des téchnologies Microsoft, des bonnes practices en matière de qualité du code, d'organisation et de management d'équipes IT.
 
 ![](/assets/MHdWKUj__100x100_02.jpg)
 
-### Contact :
+## Contact
 
 [Linkedin](https://www.linkedin.com/in/geoffreyknobloch/ "Linkedin") : GeoffreyKnobloch
 
