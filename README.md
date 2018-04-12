@@ -10,9 +10,9 @@ C\# pour langage, .NET Core ou .NET Framework pour framework, Visual Studio pour
 
 ## A propos de l'auteur:
 
-Geoffrey Knobloch, développeur .NET, enthousiaste des téchnologies Microsoft, des bonnes practices en matière de qualité du code, d'organisation et de management d'équipes IT.
+Geoffrey Knobloch, Ingénieur concepteur développeur .NET, enthousiaste des téchnologies Microsoft, des bonnes practices en matière de qualité du code, d'organisation et de management d'équipes IT.
 
-![](/assets/MHdWKUj__400x400.jpg)
+![](/assets/MHdWKUj__100x100.jpg)
 
 ### Me contacter sur :
 
