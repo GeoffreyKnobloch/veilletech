@@ -74,7 +74,7 @@ Microsoft recommande l'utilisation d'un Hosted Agent si notre code est sur VSTS.
 
 ##### Capabilities
 
-Chaque agent a une liste de Capabilities \(capcitées\). Les Capabilites sont des paires nom-valeur qui sont :
+Chaque agent a une liste de Capabilities \(capacitées\). Les Capabilites sont des paires nom-valeur qui sont :
 
 * découverte par le logiciel Agent : system capabilities \(capcitées system\)
 * définies par l'utilisateur : user capabilities
@@ -86,5 +86,19 @@ Le logiciel Agent détermine automatiquement diverses system capabilities comme 
 * Version de certains logiciels installés sur la machine
 * Les variables d'environnements définis dans la machine apparaissent automatiquement dans la liste de system capabilities
 
-Lorsque l'on crée une builde ou release definition, ou lorsque l'on queue une build ou déploiement, 
+Lorsque l'on crée une build ou release definition, ou lorsque l'on queue une build ou déploiement, le système donne le job uniquement aux agents qui ont la** capabilitie **correspondante à la demande spécifié dans **la définition de build.**
+
+**Definition de build** : [https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/build/options?view=vsts](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/build/options?view=vsts)
+
+De ce fait, les Capabilities permettent de diriger les builds et les déploiements vers un agent spécifique.
+
+On peut consulter les System Capabilities et modifier les User capabilities en navigant sur le hub Agent pools.
+
+Pour VSTS : https://{your\_account}.visualstudio.com/\_admin/\_AgentPool
+
+
+
+##### Communication
+
+
 
