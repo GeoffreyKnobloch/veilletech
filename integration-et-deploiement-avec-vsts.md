@@ -214,17 +214,9 @@ Pour cela, il nous faut un compte Azure. Il est possible d'en faire un gratuitem
 
 Une fois le compte Microsoft Azure fait, rendez vous sur le Tableau de bord azure :![](/assets/Azure.PNG)
 
+#### Coté VSTS
 
-
-
-
-
-
-
-
-$$$$$$$$$$$$$$$$$APRES AZURE ON FERA CA$$
-
-Pour cela, on se rend dans l'onglet Build and Release / Releases :
+On se rend dans l'onglet Build and Release / Releases :
 
 ![](/assets/Release.PNG)
 
