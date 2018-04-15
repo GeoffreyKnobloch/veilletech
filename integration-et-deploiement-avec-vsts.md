@@ -144,5 +144,25 @@ Cliquez sur Valider tout puis sur Synchroniser
 
 Puis sur "Pousser".
 
+![](/assets/PullRequest.PNG)
+
+Puis, comme suggéré, cliquez sur "Créez une demande de tirage \(Pull request\) afin de faire une Pull request.
+
+Nous revenons alors sur VSTS. Ici vous pouvez constater dans l'onglet "Files" que le code de la solution Hello World est bien sur la branche Master.
+
+Afin d'ordonner les développements en utilisant un service GIT comme contrôle de code source, nous allons créer une autre branche pour ne pas archiver nos modifications directement sur la branche Master, mais plutôt les archiver sur une branche de Dev, que nous pousserons sur Master pour chaque versions stables.
+
+Pour cela, une des manières de faire est de naviguer sur l'onglet Branches,![](/assets/Branches.PNG)
+
+puis de cliquer sur New Branch, puis créer une branche nommée dev, basée sur master.
+
+Si celle-ci n'apparaît pas dans Visual Studio, créez là en là nommant pareillement : dev, basée sur master.
+
+Pour tester la branche, nous allons faire une modification. En se plaçant sur la branche dev dans Visual Studio, modifions Index.cshtml afin de changer une ligne :  ViewData\["Title"\] devient "Hello World" et non "Home page".
+
+En comparant Dev et Master, on a bien la différence que l'on vient d'archiver :
+
+![](/assets/DevToMaster.PNG)
+
 
 
