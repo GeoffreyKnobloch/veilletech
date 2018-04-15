@@ -1,8 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [UML](uml.md)
-  * [Diagramme de classe](uml/diagramme-de-classe.md)
+* [Diagramme de classe](uml/diagramme-de-classe.md)
 * [Pattern](dotnet/design-pattern.md)
   * [Creational Patterns](dotnet/design-pattern/creational-patterns.md)
   * [Behavorial Patterns](dotnet/design-pattern/behavorial-patterns.md)
