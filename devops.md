@@ -3,7 +3,7 @@
 Sources :
 
 * [https://fr.wikipedia.org/wiki/Devops](https://fr.wikipedia.org/wiki/Devops)
-* [https://fr.wikipedia.org/wiki/Cha%C3%AEne\_d%27outils\_Devops](https://fr.wikipedia.org/wiki/Cha%C3%AEne_d%27outils_Devops)
+* \[[https://fr.wikipedia.org/wiki/Chaîne\_d'outils\_Devops\]\(https://fr.wikipedia.org/wiki/Chaîne\_d'outils\_Devops](https://fr.wikipedia.org/wiki/Chaîne_d'outils_Devops]%28https://fr.wikipedia.org/wiki/Chaîne_d'outils_Devops)\)
 
 ## Définition
 
@@ -57,4 +57,18 @@ Sanjeev Sharma et Bernie Coyne recommandent, pour répondre à ces capabilities 
 ## Chaîne d'outil DevOps
 
 Plan - Create - Verify - Package - Release - Configure - Monitor - Repeat
+
+## CI / CD / CD
+
+Source : [https://devops.com/i-want-to-do-continuous-deployment/\#disqus\_thread](https://devops.com/i-want-to-do-continuous-deployment/#disqus_thread)
+
+![](/assets/cicdcd-1024x447.png)
+
+Ce schémas résume très bien la différence qu'il y a entre Continuous Delivery \(Livraison continue\), et Continuous Deployment \(Déploiement continu\).
+
+Bien que le déploiement continu soit un objectif noble, dans la pratique il est presque impossible de réellement vouloir qu'un archivage entraîne automatiquement un déploiement en production.
+
+Il y a confusion entre les deux parfois, mais c'est en fait nettement différent.
+
+La continuous delivery \(livraison continue\) est le déploiement continu en environnement de Test. En revanche, le passage en environnement de production nécessite que des personnes approuvent le déploiement. En cela il n'est pas totalement automatique donc pas tout à fait continu.
 
