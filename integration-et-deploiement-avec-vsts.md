@@ -230,5 +230,15 @@ Pour avoir un App Service Name disponible, il faut aller sur Azure et créer une
 
 Cliquez sur App Services à gauche, puis +Add puis sélectionnez Web App puis Create.![](/assets/Web app.PNG)Il ne vous reste plus qu'à choisir un nom de domaine qui n'est pas encore pris :![](/assets/ChoixDomaine.PNG)Ici on a choisit bonjourmonde.
 
+Cela met environ 3 minutes pour créer l'application Service. Allez vous chercher un café, à votre retour, l'App Service sera disponible pour la Release Definition sur VSTS :![](/assets/VSTSAppservice.PNG)En allant sur le website correspondant : [https://bonjourmonde.azurewebsites.net/](https://bonjourmonde.azurewebsites.net/)
+
+On a la confirmation que lll'application d'App Service est en train de tourner :![](/assets/AppService Up And Running.PNG)Une fois la définition de livraison terminée sous VSTS, sauvegardez là.
+
+Plutôt que déployer à la main, nous allons mettre en place la livraison continue. Pour cela, nous allons dans l'onglet Pipeline.
+
+![](/assets/Pipeline.PNG)
+
+On commence par ajouter un artifact : on va se baser sur le build que l'on a créé précédemment pour l'intégration continue !
+
 
 
