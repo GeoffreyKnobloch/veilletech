@@ -206,7 +206,5 @@ Double cliquez sur le build in progress pour constater les opérations qui sont 
 
 ### Déploiement continu
 
-
-
-
+L'intégration continue est mise en place, il ne reste plus qu'à implémenter le déploiement sur Azure.
 
