@@ -166,7 +166,7 @@ En comparant Dev et Master, on a bien la différence que l'on vient d'archiver :
 
 Maintenant que nous avons un projet stable, ainsi que la maîtrise du contrôle de code source, nous pouvons mettre en place l'intégration et le déploiement continu.
 
-### Mise en place de l'intégration continue
+### Intégration continue
 
 Dans l'onglet Build And Release :
 
@@ -194,5 +194,19 @@ Nous allons utiliser un Agent hosté : Microsoft se charge d'host un agent pour 
 
 Après avoir personnalisé les Tasks, on peut Save Build Definition.
 
-Pour assurer l'intégration continue, se rendre dans l'onglet Triggers et cocher Enable continuous integration, et choisir les branches sur lesquels on souhaite mettre en place l'intégration continue.![](/assets/ContinuousIntegration.PNG)On va également mettre en place l'intégration journalière à 3 heures du matin tous les jours ouvrés :![](/assets/Scheduled integration.PNG)
+Pour assurer l'intégration continue, se rendre dans l'onglet Triggers et cocher Enable continuous integration, et choisir les branches sur lesquels on souhaite mettre en place l'intégration continue.![](/assets/ContinuousIntegration.PNG)On va également mettre en place l'intégration journalière à 3 heures du matin tous les jours ouvrés :![](/assets/Scheduled integration.PNG)Puis sauvegardez.
+
+L'intégration continue est désormai assurée : à chaque nouveau commit, un build sera effectué.
+
+Pour le tester, faites une modification et archivez dans la branche dev.
+
+Vous pouvez alors constater dans l'onglet des builds en cours qu'il y a un build qui vient d'être trigger !![](/assets/Continuous integration test.PNG)
+
+Double cliquez sur le build in progress pour constater les opérations qui sont effectuées en direct. C'est également l'occasion de tester que l'application build bien avec un résultat : Build succeeded.
+
+### Déploiement continu
+
+
+
+
 
