@@ -252,5 +252,7 @@ En modifiant les triggers, les users approvals, on arrive par exemple à cette p
 
 Lorsqu'un build est déclenché à l'issu d'un archivage sur master, le déploiement dans l'environnement de test est automatique, et le déploiement dans l'environnement de production est demandé, mais soumis à l'approbation du collab Geoffrey Knobloch.
 
+Il reste un petit problème : L'environnement de Test et l'environnement de Prod pointent pour l'instant tous les deux sur la même AppService.
 
+Il existe probablement des solutions plus adaptées pour le déploiement en environnement de test \(Docker, ..\), mais ce que nous allons faire, c'est créer une deuxième AppService Application sur Azure afin qu'elle héberge notre environnement de Test pour nos testeurs.
 
