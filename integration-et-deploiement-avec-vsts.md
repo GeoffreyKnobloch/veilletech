@@ -262,7 +262,11 @@ Désormai l'environnement de test déploie automatiquement à cette URL :
 
 [https://bonjourmondetestenv.azurewebsites.net/](https://bonjourmondetestenv.azurewebsites.net/)
 
-Pour tester le tout, on va reporter les changements faits sur dev sur la branche master, si l'intégration et la livraison continue fonctionne, cela devrait mettre à jour https://bonjourmondetestenv.azurewebsites.net/ automatiquement !
+Pour tester le tout, on va reporter les changements faits sur dev sur la branche master, si l'intégration et la livraison continue fonctionne, cela devrait mettre à jour [https://bonjourmondetestenv.azurewebsites.net/](https://bonjourmondetestenv.azurewebsites.net/) automatiquement !
 
+Tout devient automatique : Build, déploiement, etc juste après le merge sur master !
 
+![](/assets/automatique.PNG)
+
+L'url de test est déployée automatiquement ! Et un mail est reçu pour confirmer le déploiement en prod !
 
