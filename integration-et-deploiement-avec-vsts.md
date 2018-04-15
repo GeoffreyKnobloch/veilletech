@@ -208,15 +208,9 @@ Double cliquez sur le build in progress pour constater les opérations qui sont 
 
 L'intégration continue est mise en place, il ne reste plus qu'à implémenter le déploiement sur Azure.
 
-#### Côté Azure
-
 Pour cela, il nous faut un compte Azure. Il est possible d'en faire un gratuitement. Vous allez devoir renseigner votre carte bancaire, mais Microsoft précise bien qu'aucun prélévement ne sera fait sans qu'il ne soit explicitement indiqué.
 
 Je conseille de faire un compte Microsoft Azure en utilisant la même adresse que le compte Microsoft que vous utilisez sur VSTS.
-
-Une fois le compte Microsoft Azure fait, rendez vous sur le Tableau de bord azure :![](/assets/Azure.PNG)
-
-#### Coté VSTS
 
 On se rend dans l'onglet Build and Release / Releases :
 
@@ -232,7 +226,7 @@ Nous allons choisir Azure App Service Deployment.
 
 Une fois créé, il faut renseigner quelques paramètres liés à Azure :![](/assets/AzureAppSetting.PNG)L'abonnement Azure apparaîtra "tout seul" dans un menu déroulant si vous utilisez le même compte Microsoft pour VSTS et pour Azure.
 
-Pour avoir un App Service Name disponible, il faut aller sur Azure et créer une Application Service.
+Pour avoir un App Service Name disponible, il faut aller sur Azure et créer une Application Service :![](/assets/Azure.PNG)
 
-
+Cliquez sur App Services à gauche, puis +Add puis sélectionnez Web App puis Create.![](/assets/Web app.PNG)
 
