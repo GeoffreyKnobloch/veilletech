@@ -222,3 +222,9 @@ On se rend dans l'onglet Build and Release / Releases :
 
 Nous allons créer une nouvelle définition de release en cliquant sur New definition.
 
+A nouveau, VSTS nous propose de choisir un Template que l'on pourra personaliser, ce afin de gagner du temps, plutôt que de démarrer avec un processus de déploiement vide :
+
+![](/assets/TemplateRelease.PNG)
+
+Nous allons choisir Azure App Service Deployment.
+
