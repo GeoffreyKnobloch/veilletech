@@ -114,5 +114,17 @@ Ici nous choisisons Git \(et non TFS\), en méthodologie Agile.
 
 ![](/assets/NewProjectDetails.PNG)
 
+Cliquer sur Create.
 
+On arrive alors sur la page de démarrage du nouveau projet.
+
+![](/assets/ProjectCreated.PNG)Cette page a son importance car c'est ici que l'on va définir le serveur Git utilisé, si l'on se base sur un projet existant, et faire la liaison avec l'IDE Visual Studio.
+
+Ici nous allons choisir comme serveur Git : VSTS \(et non GitHub, conseillé pour un projet public\).
+
+Et nous allons simplement lier ce contrôle de code source à Visual Studio 2017 puis créer un nouveau projet.
+
+Pour cela, cliquons sur Clone in Visual Studio.
+
+Cela a pour effet d'ouvrir automatiquement \(!\) Visual Studio 2017 avec la fenêtre Team Explorer ouverte, et le choix du chemin local pour travailler sur le projet.![](/assets/VisualStudioProject.PNG)
 
