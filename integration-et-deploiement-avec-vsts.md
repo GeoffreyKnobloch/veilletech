@@ -11,7 +11,7 @@ Déployer sur Azure Web App :
 1. [https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/deploy-webdeploy-webapps?view=vsts](https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/deploy-webdeploy-webapps?view=vsts) : Pour le déploiement sur Azure Web App. On se basera d'abord sur cette source.
 2. [https://docs.microsoft.com/en-us/vsts/build-release/actions/ci-cd-part-1?view=vsts](https://docs.microsoft.com/en-us/vsts/build-release/actions/ci-cd-part-1?view=vsts) Pour le déploiement d'un Hello World !. On pourra utiliser cette source pour la mise en pratique \(ou cliquer concrètement sur VSTS ..\)
 
-## Mise en place d'une build d'intégration continue
+## Les principes de l'intégration et du déploiement
 
 Nous allons dans un premier temps mettre en place l'intégration continue afin d'avoir un build Continuous Integration qui publie un package Web Deploy pour notre application .NETCore.
 
@@ -94,11 +94,15 @@ De ce fait, les Capabilities permettent de diriger les builds et les déploiemen
 
 On peut consulter les System Capabilities et modifier les User capabilities en navigant sur le hub Agent pools.
 
-Pour VSTS : https://{your\_account}.visualstudio.com/\_admin/\_AgentPool
-
-
+Pour VSTS : [https://{your\_account}.visualstudio.com/\_admin/\_AgentPool](https://{your_account}.visualstudio.com/_admin/_AgentPool)
 
 ##### Communication
+
+// TODO : Revenir à la doc et continuer ce chapitre sur les principes de l'intégration et du déploiement.
+
+## Mise en place par l'exemple
+
+
 
 
 
