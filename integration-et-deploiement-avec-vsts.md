@@ -134,5 +134,9 @@ Nous allons donc Créer une solution en local que nous irons comit en suite. C'e
 
 ![](/assets/NewSolution.PNG)
 
-Cliquez sur "Créez un projet ou une solution".![](/assets/NewSolutionHelloWorld.PNG)Nous allons ici choisir une application ASP .NET Core Razor Pages avec authentification par compte d'utilisateur individuels.![](/assets/CreationSolution.PNG)Dans l'explorateur de solution, vous pouvez constater la solution créée, avec tout ce que fournit Microsoft afin de faciliter la création d'une application de ce type. Si vous n'êtes pas familiés avec .net Core, Compilez et constatez que par défaut, votre application .net Core Razor page a ce contenu :![](/assets/StartApp.PNG)
+Cliquez sur "Créez un projet ou une solution".![](/assets/NewSolutionHelloWorld.PNG)Nous allons ici choisir une application ASP .NET Core Razor Pages avec authentification par compte d'utilisateur individuels.![](/assets/CreationSolution.PNG)Dans l'explorateur de solution, vous pouvez constater la solution créée, avec tout ce que fournit Microsoft afin de faciliter la création d'une application de ce type. Si vous n'êtes pas familiés avec .net Core, Compilez et constatez que par défaut, votre application .net Core Razor page a ce contenu :![](/assets/StartApp.PNG)On retrouve l'ensemble des fichiers en Ajout dans la fenêtre Team Explorer, on va les mettre en ligne sur le serveur Git sur la branche Master pour notre premier Commit.
+
+![](/assets/FirstComit.PNG)
+
+Cliquez sur Valider tout
 
