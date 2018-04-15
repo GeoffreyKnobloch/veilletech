@@ -254,5 +254,15 @@ Lorsqu'un build est déclenché à l'issu d'un archivage sur master, le déploie
 
 Il reste un petit problème : L'environnement de Test et l'environnement de Prod pointent pour l'instant tous les deux sur la même AppService.
 
-Il existe probablement des solutions plus adaptées pour le déploiement en environnement de test \(Docker, ..\), mais ce que nous allons faire, c'est créer une deuxième AppService Application sur Azure afin qu'elle héberge notre environnement de Test pour nos testeurs.
+Il existe probablement des solutions plus adaptées pour le déploiement en environnement de test \(Docker, Gates ..\), mais ce que nous allons faire pour le moment, c'est créer une deuxième AppService Application sur Azure afin qu'elle héberge notre environnement de Test pour nos testeurs.
+
+C'est chose faite :
+
+Désormai l'environnement de test déploie automatiquement à cette URL :
+
+[https://bonjourmondetestenv.azurewebsites.net/](https://bonjourmondetestenv.azurewebsites.net/)
+
+Pour tester le tout, on va reporter les changements faits sur dev sur la branche master, si l'intégration et la livraison continue fonctionne, cela devrait mettre à jour https://bonjourmondetestenv.azurewebsites.net/ automatiquement !
+
+
 
