@@ -172,7 +172,25 @@ Dans l'onglet Build And Release :
 
 ![](/assets/Build.PNG)
 
-Choix de New definition.
+Cliquez sur New definition.
+
+![](/assets/Source.PNG)
+
+Pour correspondre au projet que nous venons de créer, on choisit d'utiliser VSTS Git, et on sélectionne notre Repository et pour la branche par défaut, on choisit master.
+
+Nous pouvons alors choisir un Template afin d'avoir une définition de build correspondant à notre projet par défaut, que l'on peut customizer par la suite.
+
+![](/assets/Template.PNG)
+
+Pour notre application .NET Core, nous nous baserons sur le template ASP.NET Core.
+
+![](/assets/BuildDefinition.PNG)
+
+Par défaut, est proposé une build definition composée d'une Agent Phase, nommé Phase 1, qui regroupe 4 tasks : Restore, Build, Test, Publish, qui vont run sur le même agent.
+
+Il est possible d'utiliser un agent privé installé sur une machine et qui sera capable d'éxécuter l'ensemble des tasks de l'Agent Phase.
+
+Nous allons utiliser un Agent hosté : Microsoft se charge d'host un agent pour nous, sur une machine distante, et cet agent va exécuter les Tasks de l'Agent Phase.
 
 
 
