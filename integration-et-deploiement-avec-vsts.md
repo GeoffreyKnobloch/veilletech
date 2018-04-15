@@ -104,8 +104,6 @@ Pour VSTS : [https://{your\_account}.visualstudio.com/\_admin/\_AgentPool](https
 
 VSTS : [https://geoffreyknobloch.visualstudio.com/\_projects](https://geoffreyknobloch.visualstudio.com/_projects)
 
-Choix d'un projet existant : [https://geoffreyknobloch.visualstudio.com/TripTrackerLive](https://geoffreyknobloch.visualstudio.com/TripTrackerLive)
-
 ### Créer un projet sur VSTS
 
 ![](/assets/NewProject.PNG)Cliquer sur New Project puis renseigner son nom, le contrôle de version et la méthodologie.
@@ -114,7 +112,7 @@ Ici nous choisisons Git \(et non TFS\), en méthodologie Agile.
 
 ![](/assets/NewProjectDetails.PNG)
 
-Cliquer sur Create.
+Cliquez sur Create.
 
 On arrive alors sur la page de démarrage du nouveau projet.
 
@@ -136,7 +134,5 @@ Nous allons donc Créer une solution en local que nous irons comit en suite. C'e
 
 ![](/assets/NewSolution.PNG)
 
-Cliquer sur "Créez un projet ou une solution".![](/assets/NewSolutionHelloWorld.PNG)Nous allons ici choisir une application ASP .NETCore.
-
-
+Cliquez sur "Créez un projet ou une solution".![](/assets/NewSolutionHelloWorld.PNG)Nous allons ici choisir une application ASP .NET Core Razor Pages avec authentification par compte d'utilisateur individuels.![](/assets/CreationSolution.PNG)Dans l'explorateur de solution, vous pouvez constater la solution créée, avec tout ce que fournit Microsoft afin de faciliter la création d'une application de ce type. Si vous n'êtes pas familiés avec .net Core, Compilez et constatez que par défaut, votre application .net Core Razor page a ce contenu :![](/assets/StartApp.PNG)
 
