@@ -192,5 +192,7 @@ Il est possible d'utiliser un agent privé installé sur une machine et qui sera
 
 Nous allons utiliser un Agent hosté : Microsoft se charge d'host un agent pour nous, sur une machine distante, et cet agent va exécuter les Tasks de l'Agent Phase.
 
+Après avoir personnalisé les Tasks, on peut Save Build Definition.
 
+Pour assurer l'intégration continue, se rendre dans l'onglet Triggers et cocher Enable continuous integration, et choisir les branches sur lesquels on souhaite mettre en place l'intégration continue.![](/assets/ContinuousIntegration.PNG)On va également mettre en place l'intégration journalière à 3 heures du matin tous les jours ouvrés :![](/assets/Scheduled integration.PNG)
 
