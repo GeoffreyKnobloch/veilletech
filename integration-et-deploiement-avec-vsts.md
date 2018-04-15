@@ -156,13 +156,19 @@ Pour cela, une des manières de faire est de naviguer sur l'onglet Branches,![](
 
 puis de cliquer sur New Branch, puis créer une branche nommée dev, basée sur master.
 
-Si celle-ci n'apparaît pas dans Visual Studio, créez là en là nommant pareillement : dev, basée sur master.
+Si celle-ci n'apparaît pas dans Visual Studio, créez là en là nommant pareillement : dev, basée sur master en passant par Team Explorer / branches / Nouvelle branche
 
 Pour tester la branche, nous allons faire une modification. En se plaçant sur la branche dev dans Visual Studio, modifions Index.cshtml afin de changer une ligne :  ViewData\["Title"\] devient "Hello World" et non "Home page".
 
 En comparant Dev et Master, on a bien la différence que l'on vient d'archiver :
 
 ![](/assets/DevToMaster.PNG)
+
+Maintenant que nous avons un projet stable, ainsi que la maîtrise du contrôle de code source, nous pouvons mettre en place l'intégration et le déploiement \(continu\).
+
+### Mise en place de l'intégration et du déploiement
+
+
 
 
 
