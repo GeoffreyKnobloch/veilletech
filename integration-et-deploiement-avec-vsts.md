@@ -228,5 +228,7 @@ Une fois créé, il faut renseigner quelques paramètres liés à Azure :![](/as
 
 Pour avoir un App Service Name disponible, il faut aller sur Azure et créer une Application Service :![](/assets/Azure.PNG)
 
-Cliquez sur App Services à gauche, puis +Add puis sélectionnez Web App puis Create.![](/assets/Web app.PNG)
+Cliquez sur App Services à gauche, puis +Add puis sélectionnez Web App puis Create.![](/assets/Web app.PNG)Il ne vous reste plus qu'à choisir un nom de domaine qui n'est pas encore pris :![](/assets/ChoixDomaine.PNG)Ici on a choisit bonjourmonde.
+
+
 
