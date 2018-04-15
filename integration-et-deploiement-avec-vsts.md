@@ -138,5 +138,11 @@ Cliquez sur "Créez un projet ou une solution".![](/assets/NewSolutionHelloWorld
 
 ![](/assets/FirstComit.PNG)
 
-Cliquez sur Valider tout
+Cliquez sur Valider tout puis sur Synchroniser
+
+![](/assets/PousserComit.PNG)
+
+Puis sur "Pousser".
+
+
 
