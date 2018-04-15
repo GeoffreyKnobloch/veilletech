@@ -240,5 +240,17 @@ Plutôt que déployer à la main, nous allons mettre en place la livraison conti
 
 On commence par ajouter un artifact : on va se baser sur le build que l'on a créé précédemment pour l'intégration continue !
 
+![](/assets/Artifact.PNG)
+
+Nous avions fait le choix que le build se déclenche à chaque archivage sur dev et sur master.
+
+Pour la livraison continue, nous souhaitons livrer que lorsqu'un archivage sur master est effectué afin de ne livrer que des versions stables.
+
+Pour que la livraison soit continue, on joue sur les trigger afin d'enable que la livraison soit automatique.
+
+En modifiant les triggers, les users approvals, on arrive par exemple à cette pipeline :![](/assets/Chaine.PNG)On arrive au résultat suivant :
+
+Lorsqu'un build est déclenché à l'issu d'un archivage sur master, le déploiement dans l'environnement de test est automatique, et le déploiement dans l'environnement de production est demandé, mais soumis à l'approbation du collab Geoffrey Knobloch.
+
 
 
