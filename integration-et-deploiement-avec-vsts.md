@@ -164,11 +164,15 @@ En comparant Dev et Master, on a bien la différence que l'on vient d'archiver :
 
 ![](/assets/DevToMaster.PNG)
 
-Maintenant que nous avons un projet stable, ainsi que la maîtrise du contrôle de code source, nous pouvons mettre en place l'intégration et le déploiement \(continu\).
+Maintenant que nous avons un projet stable, ainsi que la maîtrise du contrôle de code source, nous pouvons mettre en place l'intégration et le déploiement continu.
 
-### Mise en place de l'intégration et du déploiement
+### Mise en place de l'intégration continue
 
+Dans l'onglet Build And Release :
 
+![](/assets/Build.PNG)
+
+Choix de New definition.
 
 
 
