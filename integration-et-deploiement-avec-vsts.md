@@ -100,9 +100,19 @@ Pour VSTS : [https://{your\_account}.visualstudio.com/\_admin/\_AgentPool](https
 
 // TODO : Revenir à la doc et continuer ce chapitre sur les principes de l'intégration et du déploiement.
 
-## Mise en place par l'exemple
+## Mise en place
 
+VSTS : [https://geoffreyknobloch.visualstudio.com/\_projects](https://geoffreyknobloch.visualstudio.com/_projects)
 
+Choix d'un projet existant : [https://geoffreyknobloch.visualstudio.com/TripTrackerLive](https://geoffreyknobloch.visualstudio.com/TripTrackerLive)
+
+### Créer un projet sur VSTS
+
+![](/assets/NewProject.PNG)Cliquer sur New Project puis renseigner son nom, le contrôle de version et la méthodologie.
+
+Ici nous choisisons Git \(et non TFS\), en méthodologie Agile.
+
+![](/assets/NewProjectDetails.PNG)
 
 
 
