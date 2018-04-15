@@ -208,3 +208,25 @@ Double cliquez sur le build in progress pour constater les opérations qui sont 
 
 L'intégration continue est mise en place, il ne reste plus qu'à implémenter le déploiement sur Azure.
 
+#### Côté Azure
+
+Pour cela, il nous faut un compte Azure. Il est possible d'en faire un gratuitement. Vous allez devoir renseigner votre carte bancaire, mais Microsoft précise bien qu'aucun prélévement ne sera fait sans qu'il ne soit explicitement indiqué.
+
+Une fois le compte Microsoft Azure fait, rendez vous sur le Tableau de bord azure :![](/assets/Azure.PNG)
+
+
+
+
+
+
+
+
+
+$$$$$$$$$$$$$$$$$APRES AZURE ON FERA CA$$
+
+Pour cela, on se rend dans l'onglet Build and Release / Releases :
+
+![](/assets/Release.PNG)
+
+Nous allons créer une nouvelle définition de release en cliquant sur New definition.
+
