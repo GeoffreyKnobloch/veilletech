@@ -126,5 +126,17 @@ Et nous allons simplement lier ce contrôle de code source à Visual Studio 2017
 
 Pour cela, cliquons sur Clone in Visual Studio.
 
-Cela a pour effet d'ouvrir automatiquement \(!\) Visual Studio 2017 avec la fenêtre Team Explorer ouverte, et le choix du chemin local pour travailler sur le projet.![](/assets/VisualStudioProject.PNG)
+Cela a pour effet d'ouvrir automatiquement \(!\) Visual Studio 2017 avec la fenêtre Team Explorer ouverte, et le choix du chemin local pour travailler sur le projet.![](/assets/VisualStudioProject.PNG)Une fois le choix du chemin local fait, cliquer sur Cloner.
+
+Nous avons donc cloné en local la solution hébergée sur VSTS.
+
+Sur VSTS, il n'y a pour le moment rien car nous venons de créer un projet vide.
+
+Nous allons donc Créer une solution en local que nous irons comit en suite. C'est d'ailleurs ce que suggère la fenêtre Team Explorer.
+
+![](/assets/NewSolution.PNG)
+
+Cliquer sur "Créez un projet ou une solution".![](/assets/NewSolutionHelloWorld.PNG)Nous allons ici choisir une application ASP .NETCore.
+
+
 
