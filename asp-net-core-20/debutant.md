@@ -19,6 +19,10 @@ Source : [https://mva.microsoft.com/en-US/training-courses/aspnet-core-beginner-
 * type myConsoleApp.csproj \(pour en voir le contenu\)
 * type Program.cs
 * dotnet run ==&gt; Va run l'app !! \(faut être   dans le dossier de la solution.\)
+
+# Racourcis Visual Studio
+
+* Dans Visual Studio 2017 : Ctrl  + Alt + A pour afficher la fenêtre de commande.
 * 
 
 
