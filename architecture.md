@@ -29,5 +29,21 @@ View :
 
 * Pas besoin de view : nothing to Json ou Json to better Json
 
+## Architecture Micro Service
+
+Source : [https://blog.octo.com/larchitecture-microservices-sans-la-hype-quest-ce-que-cest-a-quoi-ca-sert-est-ce-quil-men-faut/](https://blog.octo.com/larchitecture-microservices-sans-la-hype-quest-ce-que-cest-a-quoi-ca-sert-est-ce-quil-men-faut/)
+
+### Vocabulaire
+
+Service : Un service métier : Un groupe de services techniques \(REST, SOAP\) qui fournissent une fonctionnalité qui a un sens métier.
+
+Projet : Un projet de développement informatique sur l'ensemble de son cycle de vie. \(Pas seulement sur sa phase Projet, avant son basculement en mode Maintenance\).
+
+### Constat
+
+Plus le projet est gros, plus il est difficile de le maintenir, de le faire évoluer sans effet de bord. Même si l'architecture logicielle est bonne, il apparaît avec le temps des rustines, les fonctionnalitées métier deviennent de plus en plus complexe.
+
+
+
 
 
