@@ -39,7 +39,11 @@ Service : Un service métier : Un groupe de services techniques \(REST, SOAP\) q
 
 Projet : Un projet de développement informatique sur l'ensemble de son cycle de vie. \(Pas seulement sur sa phase Projet, avant son basculement en mode Maintenance\).
 
-Monolithe : Application qui n'est pas en architecture MicroService.
+Monolithe : Une grosse application qui gère l'UI / Component / Layers / Class. L'invers de l'architecture Micro-Service.
+
+Source : [https://www.c-sharpcorner.com/article/monolithic-application-design/](https://www.c-sharpcorner.com/article/monolithic-application-design/)
+
+Celle-ci a l'avantage d'être facile à déployer, mais rencontre les problèmes de couplage verticaux \(UI / Component / Layer / class\) et horizontaux \(entre plusieurs Component qui intéragissent\)
 
 ### Constat
 
@@ -56,6 +60,4 @@ Il ne s’agit pas de séparer les gros projets en sous-équipes mais bien de pr
 Les échanges entre les projets se font par des services. \(REST / JSON\).![](https://blog.octo.com/wp-content/uploads/2015/10/microservices-1024x464.png)
 
 On a beaucoup de petits projets, découpés en Petits domaines métiers, plutôt que des gros projets, découpés en gros domaines métiers.
-
-
 
