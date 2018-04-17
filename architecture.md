@@ -43,7 +43,15 @@ Projet : Un projet de développement informatique sur l'ensemble de son cycle de
 
 Plus le projet est gros, plus il est difficile de le maintenir, de le faire évoluer sans effet de bord. Même si l'architecture logicielle est bonne, il apparaît avec le temps des rustines, les fonctionnalitées métier deviennent de plus en plus complexe.
 
+### L'architecture microservices
 
+Pour éviter le problème des gros projets, il suffit de n'avoir que des petits projets : une réponse simple et radicale.
 
+On limite donc la taille des projets à quelques personnes pour n'avoir que des Pizza teams d'une taille maximale de 7 personnes tout compris.
 
+Il ne s’agit pas de séparer les gros projets en sous-équipes mais bien de projets _indépendants _: chacun a son organisation, son calendrier, sa base de code et ses donnée.
+
+Les échanges entre les projets se font par des services. \(REST / JSON\).![](https://blog.octo.com/wp-content/uploads/2015/10/microservices-1024x464.png)
+
+On a beaucoup de petits projets.
 
