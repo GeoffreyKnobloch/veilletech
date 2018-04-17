@@ -39,6 +39,8 @@ Service : Un service métier : Un groupe de services techniques \(REST, SOAP\) q
 
 Projet : Un projet de développement informatique sur l'ensemble de son cycle de vie. \(Pas seulement sur sa phase Projet, avant son basculement en mode Maintenance\).
 
+Monolithe : Application qui n'est pas en architecture MicroService.
+
 ### Constat
 
 Plus le projet est gros, plus il est difficile de le maintenir, de le faire évoluer sans effet de bord. Même si l'architecture logicielle est bonne, il apparaît avec le temps des rustines, les fonctionnalitées métier deviennent de plus en plus complexe.
@@ -53,5 +55,7 @@ Il ne s’agit pas de séparer les gros projets en sous-équipes mais bien de pr
 
 Les échanges entre les projets se font par des services. \(REST / JSON\).![](https://blog.octo.com/wp-content/uploads/2015/10/microservices-1024x464.png)
 
-On a beaucoup de petits projets.
+On a beaucoup de petits projets, découpés en Petits domaines métiers, plutôt que des gros projets, découpés en gros domaines métiers.
+
+
 
