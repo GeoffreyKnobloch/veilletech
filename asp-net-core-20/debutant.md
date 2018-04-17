@@ -23,6 +23,7 @@ Source : [https://mva.microsoft.com/en-US/training-courses/aspnet-core-beginner-
 # Racourcis Visual Studio
 
 * Dans Visual Studio 2017 : Ctrl  + Alt + A pour afficher la fenêtre de commande.
-* 
+* Dans la fenêtre de commande, il y a possibilité de gérer pas mal de choses de Visual Studio 2017, par exemple Affichage.&lt;ChoseAAfficher&gt; comme Affichage.C\#Interactive pour commencer à faire du C\#Interactive pour tester rapidement le comportement d'une méthode du framework par exemple.
+
 
 
