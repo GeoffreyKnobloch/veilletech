@@ -7,6 +7,7 @@
 * [Entretien technique](recrutement.md)
 * [Programmation asynchrone](programmation-asynchrone.md)
 * [Caching en ASP .net](caching-en-asp-net.md)
+* [Dependency Injection](dependency-injection.md)
 * [Architecture](architecture.md)
 * [ASP .NET Core 2.0](asp-net-core-20.md)
   * [Présentation ASP .NET Core](presentation-asp-net-core.md)
@@ -25,7 +26,6 @@
   * [Structural Patterns](dotnet/design-pattern/structural-patterns.md)
     * [Data Transfer Object](dotnet/design-pattern/structural-patterns/data-transfer-object.md)
 * [Clean Code](clean-code.md)
-* [Utilitaire](utilitaire.md)
-* [Ressources](ressources.md)
 * [Dependency Injection](dependency-injection.md)
+* [Ressources](ressources.md)
 
