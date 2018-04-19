@@ -25,4 +25,5 @@
 * [Clean Code](clean-code.md)
 * [Utilitaire](utilitaire.md)
 * [Ressources](ressources.md)
+* [Dependency Injection](dependency-injection.md)
 
