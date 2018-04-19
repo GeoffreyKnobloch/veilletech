@@ -26,6 +26,5 @@
   * [Structural Patterns](dotnet/design-pattern/structural-patterns.md)
     * [Data Transfer Object](dotnet/design-pattern/structural-patterns/data-transfer-object.md)
 * [Clean Code](clean-code.md)
-* [Dependency Injection](dependency-injection.md)
 * [Ressources](ressources.md)
 
