@@ -10,8 +10,10 @@
 * [Architecture](architecture.md)
 * [ASP .NET Core 2.0](asp-net-core-20.md)
   * [Présentation ASP .NET Core](presentation-asp-net-core.md)
+  * [Startup](startup.md)
   * [Conception de A à Z](asp-net-core-20/conception-de-a-a-z.md)
   * [Débutant](asp-net-core-20/debutant.md)
+  * Dependency Injection
 * [DevOps](devops.md)
 * [Intégration et Déploiement](integration-et-deploiement-avec-vsts.md)
 * [Microsoft Azure](microsoft-azure.md)
