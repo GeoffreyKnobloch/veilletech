@@ -13,7 +13,7 @@
   * [Startup](startup.md)
   * [Conception de A à Z](asp-net-core-20/conception-de-a-a-z.md)
   * [Débutant](asp-net-core-20/debutant.md)
-  * Dependency Injection
+  * [Dependency Injection .NET Core](dependency-injection-net-core.md)
 * [DevOps](devops.md)
 * [Intégration et Déploiement](integration-et-deploiement-avec-vsts.md)
 * [Microsoft Azure](microsoft-azure.md)
