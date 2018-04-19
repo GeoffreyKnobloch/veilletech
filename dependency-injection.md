@@ -25,7 +25,7 @@ Intérêt :
 
 Test unitaire : possibilité de mocker Iclass2 pour réellement tester un comportement de Class1.
 
-Titre 2 : L’injection de dépendances en .NET, vu de 2009.
+## L’injection de dépendances en .NET, vu de 2009.
 
 Source :[https://philippe.developpez.com/articles/dotnet/injectiondedependances/](https://philippe.developpez.com/articles/dotnet/injectiondedependances/)
 
