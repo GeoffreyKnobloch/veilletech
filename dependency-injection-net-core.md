@@ -10,42 +10,70 @@ Un Repository, un Service, un Controller, tous 3 construits par injection de dé
 
 Avec injection de dépendance multiple dans un unique constructeur \(contrairement à la vision de 2009 ci-dessous ou on envisageait d’exposer une propriété publique \(!\)
 
+
+
 La configuration se fait dans la classe Startup :
 
-| publicclassStartup |  |
-| :--- | :--- |
-|  | { |
-|  | // This method gets called by the runtime. Use this method to add services to the container. |
-|  | publicvoidConfigureServices\(IServiceCollectionservices\) |
-|  | { |
-|  | services.AddDbContext&lt;ApplicationDbContext&gt;\(options =&gt; |
-|  | options.UseInMemoryDatabase\(\) |
-|  | \); |
-|  |  |
-|  | // Add framework services. |
-|  | services.AddMvc\(\); |
-|  |  |
-|  | // Register application services. |
-|  | services.AddScoped&lt;ICharacterRepository, CharacterRepository&gt;\(\); |
-|  | services.AddTransient&lt;IOperationTransient, Operation&gt;\(\); |
-|  | services.AddScoped&lt;IOperationScoped, Operation&gt;\(\); |
-|  | services.AddSingleton&lt;IOperationSingleton, Operation&gt;\(\); |
-|  | services.AddSingleton&lt;IOperationSingletonInstance&gt;\(newOperation\(Guid.Empty\)\); |
-|  | services.AddTransient&lt;OperationService, OperationService&gt;\(\); |
-|  | } |
-|  |  |
-|  | // This method gets called by the runtime. Use this method to configure the HTTP request pipeline. |
-|  | publicvoidConfigure\(IApplicationBuilderapp,IHostingEnvironmentenv\) |
-|  | { |
-|  | if\(env.IsDevelopment\(\)\) |
-|  | { |
-|  | app.UseDeveloperExceptionPage\(\); |
-|  | } |
-|  |  |
-|  | app.UseStaticFiles\(\); |
-|  |  |
-|  | app.UseMvcWithDefaultRoute\(\); |
-|  | } |
+`public class Startup`
+
+`{`
+
+`// This method gets called by the runtime. Use this method to add services to the container.`
+
+`publicvoidConfigureServices(IServiceCollectionservices)`
+
+`{`
+
+`services.AddDbContext<ApplicationDbContext>(options =>`
+
+`options.UseInMemoryDatabase()`
+
+`);`
+
+`// Add framework services.`
+
+`services.AddMvc();`
+
+`// Register application services.`
+
+`services.AddScoped<ICharacterRepository, CharacterRepository>();`
+
+`services.AddTransient<IOperationTransient, Operation>();`
+
+`services.AddScoped<IOperationScoped, Operation>();`
+
+`services.AddSingleton<IOperationSingleton, Operation>();`
+
+`services.AddSingleton<IOperationSingletonInstance>(newOperation(Guid.Empty));`
+
+`services.AddTransient<OperationService, OperationService>();`
+
+`}`
+
+`// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.`
+
+`publicvoidConfigure(IApplicationBuilderapp,IHostingEnvironmentenv)`
+
+`{`
+
+`if(env.IsDevelopment())`
+
+`{`
+
+`app.UseDeveloperExceptionPage();`
+
+`}`
+
+`app.UseStaticFiles();`
+
+`app.UseMvcWithDefaultRoute();`
+
+`}`
+
+  
+
+
+
 
 Le Conteneur de Service par défaut fourni par ASP .NET Core offre un ensemble minimal de fonctionnalités et n’a pas vocation à remplacer d’autres conteneurs.
 
