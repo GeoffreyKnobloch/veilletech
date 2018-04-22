@@ -1,5 +1,21 @@
 # Architecture d'une application
 
+## Méthodes d'architecture
+
+Source : Meet-up Arch Kata du 21/04/2018
+
+## 4C
+
+
+
+## Event storming
+
+
+
+## 
+
+## 
+
 ## Architecture en APIs
 
 Une architecture qui semble pertinente :
@@ -62,8 +78,4 @@ Les échanges entre les projets se font par des services. \(REST / JSON\).![](ht
 On a beaucoup de petits projets, découpés en Petits domaines métiers, plutôt que des gros projets, découpés en gros domaines métiers.
 
 Exemple de soundcloud :[http://philcalcado.com/2015/09/08/how\_we\_ended\_up\_with\_microservices.html](http://philcalcado.com/2015/09/08/how_we_ended_up_with_microservices.html)
-
-
-
-
 
