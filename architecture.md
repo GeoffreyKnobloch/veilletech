@@ -4,7 +4,7 @@
 
 Source :
 
-Meet-up Arch Kata du 21/04/2018 
+Meet-up Arch Kata du 21/04/2018
 
 [http://nealford.com/katas/list.html](http://nealford.com/katas/list.html)
 
@@ -44,13 +44,11 @@ Diagramme de classe des components
 
 ## Event storming
 
-Source : 
+Source :
 
 [https://fr.slideshare.net/jeppec/event-storming-48594742](https://fr.slideshare.net/jeppec/event-storming-48594742)
 
 [http://ziobrando.blogspot.fr/2013/11/introducing-event-storming.html](http://ziobrando.blogspot.fr/2013/11/introducing-event-storming.html)
-
-
 
 ![](https://lh3.googleusercontent.com/aFYcyQqvKq0T_A00Ir_lZpGupem8ieRkbpuxNga8D62zhR8wbvMhUjLrBYOedrvT7qX_JNvwgQxsJLM5f8wbg8HmLQP7RETV7BdKoD8Nr8MqXVt7duD2YdM7WkHntDMemGBUI_0wVEXTvWgwZczrO8TcZ1uom4v_eNMLG0eb9yosjcRJ53CEY_72LMVJ-KmJoZJu1GByYXXE9ldtUdq0JpRBu0ELdqy7VjJEf4g9pySDA5rrKgIhPXXWfLGyg16jY6dwqo6U5mufFwCJWdK2r0v7PMUiH5GgSDcLy0WJy8H3bL4Fy6dPVmQ3NH0nrv76Qi8BvIwxyoXxc4UVPbESEdVPY4eaBECs15e8c8cq7az8CMVBe3n5ncdwmGVv04edSyg8teDKwRE3BK8cI9h-o4VjQ3Z1-mYkq4KsSWQrmCd_rI2cXrdW3ImGEOchkrEayzxZnKVJi9i2mzGa-GJsOcl8Jy4hPCVn44IxR7MPFIHrNY5ksnZe13smf4v00SX4VUdrtrEtNw8kWiJEbOoUoi1KEyhObO9XEweX7FjeQW3ks2o0G-2bxKwspfLfT2ynWEmAHXy2lSh3qzrWUQ54cRpyQI7ikuR_jJ0B4uSCatZDyXjwOXWFwrjrtuJi2mEFUq5EACgat3llPJVnbqscre3wTlJ1aruN=w626-h836-no)
 
