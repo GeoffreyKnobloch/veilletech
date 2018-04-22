@@ -1,4 +1,4 @@
-# Architecture d'une application
+# Architecture d'un système
 
 ## Méthodes d'architecture
 
