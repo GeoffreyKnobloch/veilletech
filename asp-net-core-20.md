@@ -1,4 +1,4 @@
-# ASP .NET Core 2.0
+# ASP .NET Core 2.x
 
 ## Conception de A à Z
 
@@ -26,7 +26,7 @@ Source : [https://www.twitch.tv/videos/229614321](https://www.twitch.tv/videos/2
 
 Source : [https://mva.microsoft.com/en-US/training-courses/aspnet-core-beginner-18153](https://mva.microsoft.com/en-US/training-courses/aspnet-core-beginner-18153)
 
-## Intermédiaire 
+## Intermédiaire
 
 Source : [https://mva.microsoft.com/en-US/training-courses/aspnet-core-intermediate-18154](https://mva.microsoft.com/en-US/training-courses/aspnet-core-intermediate-18154)
 
