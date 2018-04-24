@@ -159,6 +159,16 @@ En fait, dans le fichier ViewStart.cshtml, est exécuté du code communément à
 
 Un View Template ne devrait JAMAIS avoir de logique business, ou intéragir avec la DataBase directement.
 
+3 façons de passer de la data du controller vers la View :
+
+Source : [https://blogs.msdn.microsoft.com/rickandy/2011/01/28/dynamic-v-strongly-typed-views/](https://blogs.msdn.microsoft.com/rickandy/2011/01/28/dynamic-v-strongly-typed-views/)
+
+* Le viewbag
+* Passer un type dynamique \(en utilisant @model dynamic\)
+* Un objet ViewModel fortement typé
+
+##### Le viewbag
+
 Une des façons de passer de la data à la View : le ViewBag :
 
 ```
@@ -188,5 +198,43 @@ La vue correspondante qui exploite cette data :
 </ul>
 ```
 
+##### Passage d'un type dynamique
 
+```
+using System.Collections.Generic;
+using System.Web.Mvc;
+
+namespace Mvc3ViewDemo.Controllers {
+
+    public class Blog {
+        public string Name;
+        public string URL;
+    }
+
+    public class HomeController : Controller {
+
+        List<Blog> topBlogs = new List<Blog>
+      { 
+new Blog { Name = "ScottGu", URL = "http://weblogs.asp.net/scottgu/"},
+new Blog { Name = "Jon Galloway", URL = "http://weblogs.asp.net/jgalloway"},
+new Blog { Name = "Scott Hanselman", URL = "http://www.hanselman.com/blog/"}
+      };
+
+        public ActionResult IndexNotStonglyTyped() {
+            return View(topBlogs);
+        }
+
+        public ActionResult StonglyTypedIndex() {
+            return View(topBlogs);
+        }
+
+        public ActionResult IndexViewBag() {
+            ViewBag.BestBlogs = topBlogs;
+            return View();
+        }
+    }
+}
+```
+
+La façon la plus clean est de passer la data via un ViewModel \(objet du model fortement typé\)
 
