@@ -130,5 +130,5 @@ Pour beaucoup d'applications MVC, la route par défaut est suffisante. On passe 
 
 Source : [https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-view](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-view)
 
-
+controller : return View\(\) retourne la vue du même nom que l'action du controller par convention.
 
