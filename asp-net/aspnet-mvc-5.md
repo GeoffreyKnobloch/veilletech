@@ -122,7 +122,7 @@ Appel :
 
 Il suffit donc d'appeler /Helloworld/welcome2/geoffrey/1 pour avoir le même résultat que précédement, maintenant qu'on a ajouté cette route.
 
-Cela s'appelle passer des route data plutôt que des query string.
+On a passé des route data plutôt que des query string.
 
 Pour beaucoup d'applications MVC, la route par défaut est suffisante. On passe plutôt de la data en utilisant le model binder.
 
