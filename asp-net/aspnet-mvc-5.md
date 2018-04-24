@@ -126,6 +126,10 @@ On a passé des route data plutôt que des query string.
 
 Pour beaucoup d'applications MVC, la route par défaut est suffisante. On passe plutôt de la data en utilisant le model binder.
 
+Pour passer les paramètres en Query string vers les paramètres de la méthode, le model binding system de ASP.NET MVC est utilisé.
+
+Source : [https://odetocode.com/Blogs/scott/archive/2009/04/27/6-tips-for-asp-net-mvc-model-binding.aspx](https://odetocode.com/Blogs/scott/archive/2009/04/27/6-tips-for-asp-net-mvc-model-binding.aspx)
+
 ### La View
 
 Source : [https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-view](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-view)
@@ -149,6 +153,39 @@ En fait, dans le fichier ViewStart.cshtml, est exécuté du code communément à
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+```
+
+#### Passer de la data du Controller vers la View
+
+Un View Template ne devrait JAMAIS avoir de logique business, ou intéragir avec la DataBase directement.
+
+Une des façons de passer de la data à la View : le ViewBag :
+
+```
+        public ActionResult Welcome(string name, int numTimes = 1)
+        {
+            ViewBag.Message = "Hello " + name;
+            ViewBag.NumTimes = numTimes;
+
+            return View();
+        }
+```
+
+La vue correspondante qui exploite cette data :
+
+```
+@{
+    ViewBag.Title = "Welcome";
+}
+
+<h2>Welcome</h2>
+
+<ul>
+    @for (int i = 0; i < ViewBag.NumTimes; i++)
+    {
+        <li>@ViewBag.Message</li>
+    }
+</ul>
 ```
 
 
