@@ -18,7 +18,7 @@
   * [Conception de A à Z](asp-net-core-20/conception-de-a-a-z.md)
   * [Débutant](asp-net-core-20/debutant.md)
   * [Intermédiaire](intermediaire.md)
-  * Avancé
+  * [Avancé](avance.md)
 * [ASP .NET](asp-net.md)
 * [DevOps](devops.md)
 * [Intégration et Déploiement](integration-et-deploiement-avec-vsts.md)
