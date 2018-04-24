@@ -2,7 +2,7 @@
 
 ## Méthodes d'architecture
 
-Source :
+Source : [https://www.meetup.com/fr-FR/Software-Craftsmanship-Lille/events/249186561/?comment\_table\_id=490604179&comment\_table\_name=event\_comment](https://www.meetup.com/fr-FR/Software-Craftsmanship-Lille/events/249186561/?comment_table_id=490604179&comment_table_name=event_comment)
 
 Meet-up Arch Kata du 21/04/2018
 

@@ -240,7 +240,7 @@ Pour utiliser un type dynamic, la view correspondante sera :
 
 ```
 @model dynamic
-           
+
 @{
     ViewBag.Title = "IndexNotStonglyTyped";
 }
@@ -266,7 +266,7 @@ La façon la plus clean est de passer la data via un ViewModel \(objet du model 
 
 ```
 @model IEnumerable<MvcViewDemo.Controllers.Blog>
-           
+
 @{
     ViewBag.Title = "IndexNotStonglyTyped";
 }
@@ -290,5 +290,5 @@ ou on bénéficiera de l'aide de l'intellissence car on sait ce qu'est le Model.
 
 Source : [https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-model](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-model)
 
-// TODO : Continuer
+// TODO : Continuer 
 
