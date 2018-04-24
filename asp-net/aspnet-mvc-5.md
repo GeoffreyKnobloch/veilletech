@@ -83,5 +83,16 @@ Utilisation des paramètres :
 
 Ici on exploite : {controller} {action} mais toujours pas {id}, on a passé les paramètres names et numTimes en Query string.
 
+Pour utiliser {id} dans la configuration de route, il faut un paramètre id dans la méthode.
+
+```
+       // GET : HelloWorld/Welcome2/1?name=Geoffrey
+        public string Welcome2(string name, int ? id)
+        {
+            return HttpUtility.HtmlEncode("Hello " + name + ", id is: " + id);
+        }
+
+```
+
 
 
