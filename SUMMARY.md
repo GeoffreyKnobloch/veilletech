@@ -17,6 +17,7 @@
   * [Middleware](middleware.md)
   * [Conception de A à Z](asp-net-core-20/conception-de-a-a-z.md)
   * [Débutant](asp-net-core-20/debutant.md)
+* [ASP .NET](asp-net.md)
 * [DevOps](devops.md)
 * [Intégration et Déploiement](integration-et-deploiement-avec-vsts.md)
 * [Microsoft Azure](microsoft-azure.md)
@@ -29,5 +30,4 @@
     * [Data Transfer Object](dotnet/design-pattern/structural-patterns/data-transfer-object.md)
 * [Clean Code](clean-code.md)
 * [Ressources](ressources.md)
-* ASP .NET
 
