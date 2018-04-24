@@ -236,5 +236,59 @@ new Blog { Name = "Scott Hanselman", URL = "http://www.hanselman.com/blog/"}
 }
 ```
 
-La façon la plus clean est de passer la data via un ViewModel \(objet du model fortement typé\)
+Pour utiliser un type dynamic, la view correspondante sera :
+
+```
+@model dynamic
+           
+@{
+    ViewBag.Title = "IndexNotStonglyTyped";
+}
+
+<h2>Index Not Stongly Typed</h2>
+
+<p>
+ <ul>
+@foreach (var blog in Model) {
+   <li>
+    <a href="@blog.URL">@blog.Name</a>
+   </li>   
+}
+ </ul>
+</p>
+```
+
+qu'il faudra construire sans aucune aide de l'intellisence car le type est determiné au build.
+
+##### Passage d'un ViewModel fortement typé
+
+La façon la plus clean est de passer la data via un ViewModel \(objet du model fortement typé\). La view correspondante :
+
+```
+@model IEnumerable<MvcViewDemo.Controllers.Blog>
+           
+@{
+    ViewBag.Title = "IndexNotStonglyTyped";
+}
+
+<h2>Index Not Stongly Typed</h2>
+
+<p>
+ <ul>
+@foreach (var blog in Model) {
+   <li>
+    <a href="@blog.URL">@blog.Name</a>
+   </li>   
+}
+ </ul>
+</p>
+```
+
+ou on bénéficiera de l'aide de l'intellissence car on sait ce qu'est le Model.
+
+### Le Model
+
+Source : [https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-model](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-model)
+
+// TODO : Continuer
 
