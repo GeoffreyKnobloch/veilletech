@@ -126,3 +126,9 @@ On a passé des route data plutôt que des query string.
 
 Pour beaucoup d'applications MVC, la route par défaut est suffisante. On passe plutôt de la data en utilisant le model binder.
 
+### La View
+
+Source : [https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-view](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-view)
+
+
+
