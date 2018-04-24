@@ -11,9 +11,11 @@
 * [https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-2.0](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-2.0) : Doc officielle pour ASP .NET Core \(la bible Core\)
 
 * [https://github.com/aspnet/Docs ](https://github.com/aspnet/Docs ): Le repository qui accompagne la doc officielle : Un exemple illustré pour \(presque\) chaque notions !
+
 * [https://www.pluralsight.com/courses/domain-driven-design-fundamentals](https://www.pluralsight.com/courses/domain-driven-design-fundamentals) : Cours de Julie Lerman \(la gourou d'EF\) sur le Domain driven design
 * [http://deviq.com/category/principles/](http://deviq.com/category/principles/) Principes ! DevIQ : Les notions sont abordées de manière simple, clair et directe.
 * [http://deviq.com/category/patterns/](http://deviq.com/category/patterns/) Patterns !
+* [https://daveaglick.com/posts/blazor-razor-webassembly-and-mono](https://daveaglick.com/posts/blazor-razor-webassembly-and-mono) : Blazor, razor, webassembly, mono ... Il est temps de clarifier les choses en listant cet article.
 
 
 
