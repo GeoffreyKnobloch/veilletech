@@ -91,8 +91,32 @@ Pour utiliser {id} dans la configuration de route, il faut un paramètre id dans
         {
             return HttpUtility.HtmlEncode("Hello " + name + ", id is: " + id);
         }
+```
+
+En ASP.NET MVC, il est d'usage de passer les paramètres comme data de route \(comme l'id\) plutôt qu'en Query string.
 
 ```
+public class RouteConfig
+{
+   public static void RegisterRoutes(RouteCollection routes)
+   {
+      routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+      routes.MapRoute(
+          name: "Default",
+          url: "{controller}/{action}/{id}",
+          defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+      );
+
+      routes.MapRoute(
+           name: "Hello",
+           url: "{controller}/{action}/{name}/{id}"
+       );
+   }
+}
+```
+
+Ici appeler Controller/action/nom/id aura pour effet d'appeler l'action du controller et lui passer en parametre nom pour le paramètre name et id pour le paramètre id.
 
 
 
