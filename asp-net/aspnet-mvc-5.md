@@ -132,3 +132,24 @@ Source : [https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/i
 
 controller : return View\(\) retourne la vue du même nom que l'action du controller par convention.
 
+La View Index dans le dossier HelloWorld retournée par l'action Index\(\) lorsqu'il return View\(\) :
+
+```
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+```
+
+En fait, dans le fichier ViewStart.cshtml, est exécuté du code communément à toute les vues. Donc sauf si une vue a besoin d'un layout particulier, on peut supprimer la ligne qui définit le Layout, et laisser ça sur \_ViewStart, qui par défaut est :
+
+```
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+```
+
+
+
