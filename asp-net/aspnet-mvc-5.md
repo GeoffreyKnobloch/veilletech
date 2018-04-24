@@ -12,8 +12,7 @@ Source : [https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/i
 
 Le controller permet de rediriger une requête vers une view à laquelle il fournit de la data du Model layer.
 
-Exemple :  
-
+Exemple :
 
 ```
 using System.Web;
@@ -42,7 +41,6 @@ return "This is the Welcome action method...";
 }
 ```
 
-  
 Par défaut, le routing est assuré ainsi :
 
 `/[Controller]/[ActionName]/[Parameters]`
@@ -71,13 +69,19 @@ Serveur/Home ⇒ Serveur/home/index
 
 Serveur/Autre ⇒ Serveur/Autre/index
 
-Serveur/Autre/edit/1 ⇒ Serveur/Autre/edit/1 ⇒ Controlleur AutreController, méthode Edit, argument : 1.  
+Serveur/Autre/edit/1 ⇒ Serveur/Autre/edit/1 ⇒ Controlleur AutreController, méthode Edit, argument : 1.
 
+Utilisation des paramètres :
 
-TODO : Continuer avec
+```
+        // GET : HelloWorld/Welcome/?name=Geoffrey&numtimes=4
+        public string Welcome(string name, int numTimes = 1)
+        {
+            return HttpUtility.HtmlEncode("Hello " + name + ", NumTimes is: " + numTimes);
+        }
+```
 
-  
-
+Ici on exploite : {controller} {action} mais toujours pas {id}, on a passé les paramètres names et numTimes en Query string.
 
 
 
