@@ -118,3 +118,9 @@ public class RouteConfig
 
 Ici appeler Controller/action/nom/id aura pour effet d'appeler l'action du controller et lui passer en parametre nom pour le paramètre name et id pour le paramètre id.
 
+Appel :
+
+Il suffit donc d'appeler /Helloworld/welcome2/geoffrey/1 pour avoir le même résultat que précédement, maintenant qu'on a ajouté cette route.
+
+
+
