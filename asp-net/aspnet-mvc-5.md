@@ -1,6 +1,6 @@
 # ASP.NET MVC 5
 
-## Les bases du MVC
+## Reprise des bases du MVC
 
 Source :[https://openclassrooms.com/courses/apprendre-asp-net-mvc](https://openclassrooms.com/courses/apprendre-asp-net-mvc)
 
@@ -98,25 +98,23 @@ En ASP.NET MVC, il est d'usage de passer les paramètres comme data de route \(c
 ```
 public class RouteConfig
 {
-   public static void RegisterRoutes(RouteCollection routes)
-   {
-      routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+   public static void RegisterRoutes(RouteCollection routes)
+   {
+      routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-      routes.MapRoute(
-          name: "Default",
-          url: "{controller}/{action}/{id}",
-          defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-      );
+      routes.MapRoute(
+          name: "Default",
+          url: "{controller}/{action}/{id}",
+          defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+      );
 
-      routes.MapRoute(
-           name: "Hello",
-           url: "{controller}/{action}/{name}/{id}"
-       );
-   }
+      routes.MapRoute(
+           name: "Hello",
+           url: "{controller}/{action}/{name}/{id}"
+       );
+   }
 }
 ```
 
 Ici appeler Controller/action/nom/id aura pour effet d'appeler l'action du controller et lui passer en parametre nom pour le paramètre name et id pour le paramètre id.
-
-
 
