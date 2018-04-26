@@ -480,3 +480,5 @@ Lors du Post, le model binder dâ€™ASP.NET prend les valeurs du du POST et en crÃ
 
 Source : [https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-search](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-search)
 
+
+
