@@ -456,19 +456,19 @@ ViewBag.Title = "Edit";
 <h2>Edit</h2>
 @using (Html.BeginForm())
 {
-@Html.AntiForgeryToken()
-<div class="form-horizontal">
-<h4>Movie</h4>
-<hr />
-@Html.ValidationSummary(true)
-@Html.HiddenFor(model => model.ID)
-<div class="form-group">
-@Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
-<div class="col-md-10">
-@Html.EditorFor(model => model.Title)
-@Html.ValidationMessageFor(model => model.Title)
-</div>
-</div>
+    @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <h4>Movie</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.ID)
+                <div class="form-group">
+                @Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+            @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+    </div>
 }
 ```
 
@@ -479,6 +479,4 @@ Lors du Post, le model binder dâ€™ASP.NET prend les valeurs du du POST et en crÃ
 ## Ajouter une barre de recherche
 
 Source : [https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-search](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-search)
-
-
 
