@@ -292,114 +292,56 @@ Source : [https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/i
 
 #### Code first avec Entity Framework
 
-  
 Entité POCO :
 
-  
-
-
+```
 using System;
-
-  
-
-
 namespace MvcMovie.Models
-
 {
-
 public class Movie
-
 {
-
 public int ID { get; set; }
-
 public string Title { get; set; }
-
 public DateTime ReleaseDate { get; set; }
-
 public string Genre { get; set; }
-
 public decimal Price { get; set; }
-
 }
-
 }
-
-  
-
+```
 
 Avec son DbContext :
 
-  
-
-
+```
 using System;
-
 using System.Data.Entity;
-
-  
-
-
 namespace MvcMovie.Models
-
 {
-
 public class MovieDBContext : DbContext
-
 {
-
-public DbSet&lt;Movie&gt; Movies { get; set; }
-
+public DbSet<Movie> Movies { get; set; }
 }
-
 }
-
-  
-
+```
 
 MovieDBContext représente le contexte Database de Movie qui prend en charge tout : Select, modifier, supression, …
 
-  
+#### DataBase first
 
-
-Titre 4 : DataBase first
-
-  
-
-
-Source :[https://docs.microsoft.com/en-US/aspnet/visual-studio/overview/2013/aspnet-scaffolding-overview](https://docs.microsoft.com/en-US/aspnet/visual-studio/overview/2013/aspnet-scaffolding-overview)
-
-  
-
+Source : [https://docs.microsoft.com/en-US/aspnet/visual-studio/overview/2013/aspnet-scaffolding-overview](https://docs.microsoft.com/en-US/aspnet/visual-studio/overview/2013/aspnet-scaffolding-overview)
 
 Il est possible de générer du code pour une app MVC ou une Web API à partir de la base de donnée.
 
-  
-
-
-Titre 3 : Créer une Connection String et travailler avec SQL Server LocalDB
-
-  
-
+### Créer une Connection String et travailler avec SQL Server LocalDB
 
 LocalDB est une version légère de SQL Server Express Database Engine qui démarre sur demande, et tourne en mode utilisateur.
 
 LocalDB tourne tourne dans un mode d’exécution spécial de SQL Server Express qui nous permet de travailler avec une database en fichiers .mdf
 
-  
-
-
 Typiquement, les fichiers d’une database LocalDB sont dans le fichier App\_Data du projet Web.
-
-  
-
 
 LocalDB n’est pas fait pour être déployé en production car ce n’est pas designé pour fonctionner avec IIS.
 
 En revanche, une database LocalDB peut facilement être migrée sur SQL Server ou SQL Azure.
-
-  
-
 
 Donc on a le schémas : Code first -&gt; Génére LocalDB -&gt; Migre sur SQL Server
 
@@ -407,26 +349,16 @@ Plus d’informations sur les connexions String :
 
 [https://msdn.microsoft.com/library/jj653752.aspx](https://msdn.microsoft.com/library/jj653752.aspx)
 
-  
-
-
 Par défaut, Entity Framework se base sur une connexion string \(créée par défaut\) dans Web.config \(pas Web.config dans le dossier View\) :
-
-  
-
 
 Web.config :
 
-&lt;connectionStrings&gt;
-
-&lt;add name="DefaultConnection" connectionString="Data Source=\(LocalDb\)\MSSQLLocalDB;Initial Catalog=aspnet-MvcMovie-fefdc1f0-bd81-4ce9-b712-93a062e01031;Integrated Security=SSPI;AttachDBFilename=\|DataDirectory\|\aspnet-MvcMovie-fefdc1f0-bd81-4ce9-b712-93a062e01031.mdf" providerName="System.Data.SqlClient" /&gt;
-
-&lt;add name="MovieDBContext" connectionString="Data Source=\(LocalDb\)\MSSQLLocalDB;Initial Catalog=aspnet-MvcMovie;Integrated Security=SSPI;AttachDBFilename=\|DataDirectory\|\Movies.mdf" providerName="System.Data.SqlClient" /&gt;
-
-&lt;/connectionStrings&gt;
-
-  
-
+```
+<connectionStrings>
+<add name="DefaultConnection" connectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=aspnet-MvcMovie-fefdc1f0-bd81-4ce9-b712-93a062e01031;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-MvcMovie-fefdc1f0-bd81-4ce9-b712-93a062e01031.mdf" providerName="System.Data.SqlClient" />
+<add name="MovieDBContext" connectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=aspnet-MvcMovie;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\Movies.mdf" providerName="System.Data.SqlClient" />
+</connectionStrings>
+```
 
 Il y a par défaut une DefaultConnexion, qui est utilisée pour le membership database, pour controler qui peut accéder à l’application.
 
@@ -434,30 +366,15 @@ Pour en savoir plus sur la database de membership, voir :
 
 [https://docs.microsoft.com/fr-fr/aspnet/core/security/authorization/secure-data](https://docs.microsoft.com/fr-fr/aspnet/core/security/authorization/secure-data)
 
-  
-
-
 Il faut rajouter une seconde connexion string, ici MovieDbContext \(qui match la classe MovieDBContext\), afin de maitriser par exemple le fichier qui servira de DB :
 
 AttachDBFilename=\|DataDirectory\|\Movies.mdf"
 
-  
-
-
 On remarquera néanmoins que la création de la connexionString MovieDBContext n’était même pas obligatoire, car si on ne spécifie pas de Connexion String, Entity Framework va créer automatiquement une Database LocalDB dans le dossier de l’utilisateur, avec le nom totalement qualifié du DbContext \(ici MvcMovie.Models.MovieDBContext\).
 
-  
+## Accéder au Model depuis le Controller
 
-
-Titre 2 : Accéder au Model depuis le Controller
-
-  
-
-
-Source :[https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller)
-
-  
-
+Source : [https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller)
 
 Lors de l’ajout d’un Controller, il y a plusieurs choix de template.
 
@@ -465,26 +382,11 @@ Un template intéressant est MVC 5 Controller with views using Entity Framework.
 
 ça fait tout de suite un CRUD.
 
-  
-
-
 ![](https://lh4.googleusercontent.com/Q5mO6cd6HoZf-CbFwePTYJRWObECloPASGrf1pSufCwfTpScyPx2NV3M-m3zK16qD1MczWACDL7pFQ5B6DBneHCeBg4nwzymYG15tGD-Oe97c31iQYa12_flVEI775SJ3f8YYTvw)
-
-  
-
-
-  
-
 
 Il suffit alors de sélectionner l’entity et le DbContext qui porte le DbSet de l’entity.
 
-  
-
-
 ![](https://lh6.googleusercontent.com/pVULsz0PMi3ZuHIsV1eXMtIkQjsUnXLJts7QeqTzcleq1ouwngqLJAkSvr1roN4AfBM-oj_BBGJzF21mV9cXyEvNtQvEcOKl4a50TfYGBAzY_5eha0vxmgpLwAnW1n5jUdQG3fYA)
-
-  
-
 
 Visual Studio crée automatiquement un CRUD sur l’entity en question :
 
@@ -492,101 +394,53 @@ Un Controller, un dossier Views/Movies
 
 Les views : create, delete, details, edit, index.
 
-  
-
-
 Pratique pour avoir une base, puis personnaliser ensuite.
 
 Personellement, je recommande de remplacer le DbContext du controller par une classe Service à injecter par injection de dépendance.
 
 Ce Service va appeler un Data Acces Object, pour obtenir des Business Object, puis les traduire en DTO \(Data Transfer Object\) qui correspondent exactement à ce que la View a besoin.
 
-  
-
-
 Pour plus d’informations sur EntityFramework :
 
 [https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)
 
-  
-
-
 Voici ce qui a été créé pour l’Edit dans le controller :
 
-  
-
-
+```
 // GET: /Movies/Edit/5
-
-public ActionResult Edit\(int? id\)
-
+public ActionResult Edit(int? id)
 {
-
-if \(id == null\)
-
+if (id == null)
 {
-
-return new HttpStatusCodeResult\(HttpStatusCode.BadRequest\);
-
+return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 }
-
-Movie movie = db.Movies.Find\(id\);
-
-if \(movie == null\)
-
+Movie movie = db.Movies.Find(id);
+if (movie == null)
 {
-
-return HttpNotFound\(\);
-
+return HttpNotFound();
 }
-
-return View\(movie\);
-
+return View(movie);
 }
-
-  
-
-
 // POST: /Movies/Edit/5
-
 // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-
-// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-
-\[HttpPost\]
-
-\[ValidateAntiForgeryToken\]
-
-public ActionResult Edit\(\[Bind\(Include="ID,Title,ReleaseDate,Genre,Price"\)\] Movie movie\)
-
+// more details see 
+http://go.microsoft.com/fwlink/?LinkId=317598
+.
+[HttpPost]
+[ValidateAntiForgeryToken]
+public ActionResult Edit([Bind(Include="ID,Title,ReleaseDate,Genre,Price")] Movie movie)
 {
-
-if \(ModelState.IsValid\)
-
+if (ModelState.IsValid)
 {
-
-db.Entry\(movie\).State = EntityState.Modified;
-
-db.SaveChanges\(\);
-
-return RedirectToAction\("Index"\);
-
+db.Entry(movie).State = EntityState.Modified;
+db.SaveChanges();
+return RedirectToAction("Index");
 }
-
-return View\(movie\);
-
+return View(movie);
 }
-
-  
-
+```
 
 2 actions Edit, un pour GET, un pour POST ! \(Ce petit problème n’est plus présent quand on utilise Razor Page.\)
-
-  
-
-
-  
-
 
 On constate l’attribut Bind : Afin de ne recevoir QUE les propriétées désirée lors d’un POST.
 
@@ -594,76 +448,35 @@ On constate l’attribut ValidateAntiForgeryToken : Afin de se protéger contre 
 
 Cet attribut va de paire avec un appel à @Html.AntiForgeryToken\(\) dans la View :
 
-  
-
-
+```
 @model MvcMovie.Models.Movie
-
-  
-
-
 @{
-
 ViewBag.Title = "Edit";
-
 }
-
-&lt;h2&gt;Edit&lt;/h2&gt;
-
-@using \(Html.BeginForm\(\)\)
-
+<h2>Edit</h2>
+@using (Html.BeginForm())
 {
-
-@Html.AntiForgeryToken\(\) 
-
-&lt;div class="form-horizontal"&gt;
-
-&lt;h4&gt;Movie&lt;/h4&gt;
-
-&lt;hr /&gt;
-
-@Html.ValidationSummary\(true\)
-
-@Html.HiddenFor\(model =&gt; model.ID\)
-
-  
-
-
-&lt;div class="form-group"&gt;
-
-@Html.LabelFor\(model =&gt; model.Title, new { @class = "control-label col-md-2" }\)
-
-&lt;div class="col-md-10"&gt;
-
-@Html.EditorFor\(model =&gt; model.Title\)
-
-@Html.ValidationMessageFor\(model =&gt; model.Title\)
-
-&lt;/div&gt;
-
-&lt;/div&gt;
-
+@Html.AntiForgeryToken()
+<div class="form-horizontal">
+<h4>Movie</h4>
+<hr />
+@Html.ValidationSummary(true)
+@Html.HiddenFor(model => model.ID)
+<div class="form-group">
+@Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
+<div class="col-md-10">
+@Html.EditorFor(model => model.Title)
+@Html.ValidationMessageFor(model => model.Title)
+</div>
+</div>
 }
-
-  
-
+```
 
 Plus d’infos sur cette attaque :[https://docs.microsoft.com/en-US/aspnet/mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages](https://docs.microsoft.com/en-US/aspnet/mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages)
 
-  
-
-
 Lors du Post, le model binder d’ASP.NET prend les valeurs du du POST et en crée un objet Movie dans le paramètre movie.
 
-  
+## Ajouter une barre de recherche
 
-
-Titre 2 : Ajouter une barre de recherche
-
-  
-
-
-Source :
-
-[https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-search](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-search)
+Source : [https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-search](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-search)
 
