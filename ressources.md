@@ -13,9 +13,17 @@
 * [https://github.com/aspnet/Docs ](https://github.com/aspnet/Docs ): Le repository qui accompagne la doc officielle : Un exemple illustré pour \(presque\) chaque notions !
 
 * [https://www.pluralsight.com/courses/domain-driven-design-fundamentals](https://www.pluralsight.com/courses/domain-driven-design-fundamentals) : Cours de Julie Lerman \(la gourou d'EF\) sur le Domain driven design
+
 * [http://deviq.com/category/principles/](http://deviq.com/category/principles/) Principes ! DevIQ : Les notions sont abordées de manière simple, clair et directe.
 * [http://deviq.com/category/patterns/](http://deviq.com/category/patterns/) Patterns !
 * [https://daveaglick.com/posts/blazor-razor-webassembly-and-mono](https://daveaglick.com/posts/blazor-razor-webassembly-and-mono) : Blazor, razor, webassembly, mono ... Il est temps de clarifier les choses en listant cet article.
+* [https://rdonfack.developpez.com/tutoriels/dotnet/test-interface-utilisateur-application-asp.net-avec-selenium/](https://rdonfack.developpez.com/tutoriels/dotnet/test-interface-utilisateur-application-asp.net-avec-selenium/) : Selenium sur ASP.NET pour du test ihm automatisé
+
+* [https://learn-blazor.com/](https://learn-blazor.com/): Browser + Razor = Blazor ! Un framework expérimental qui permet de faire des applications single page avec du code C\# qui s'exécute côté client en exploitant WebAssembly des browsers modernes.
+
+  Cette documentation est utile pour le moment car la documentation officielle n’est pas encore sortie. Se référer à la documentation officielle lorsqu’elle existera.
+
+  
 
 
 
