@@ -7,14 +7,15 @@ Source :[https://msdn.microsoft.com/en-us/library/hh323705\(v=vs.100\).aspx](htt
 ```
 public class Class1
 {
-public readonly IClass2 _class2;
-public Class1():this(DependencyFactory.Resolve<IClass2>())
-{
-}
-public Class1(IClass2 class2)
-{
-_class2 = class2;
-}
+    public readonly IClass2 _class2;
+    public Class1():this(DependencyFactory.Resolve<IClass2>())
+    {
+    }
+    
+    public Class1(IClass2 class2)
+    {
+    _class2 = class2;
+    }
 }
 ```
 
@@ -103,8 +104,6 @@ Les conteneurs d’inversion de contrôle sont des outils conçus pour faciliter
 
 Constatation du problème sur l’appelant Form1 sans Conteneur IoC :
 
-
-
 ```
 public class Form1{
 public void LoadCustomerData(intcustomerId){
@@ -131,7 +130,6 @@ public Customer GetOneCustomer(intcustomerId){
 return new Customer(_repository.GetOneById(customerId));
 }
 }
-
 ```
 
 ```
