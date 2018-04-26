@@ -74,5 +74,3 @@ Source :[https://learn-blazor.com/getting-started/getting-blazor/](https://learn
 
 Source : [https://blogs.msdn.microsoft.com/webdev/2018/03/22/get-started-building-net-web-apps-in-the-browser-with-blazor/](https://blogs.msdn.microsoft.com/webdev/2018/03/22/get-started-building-net-web-apps-in-the-browser-with-blazor/)
 
-// TODO : Week-end project this
-
