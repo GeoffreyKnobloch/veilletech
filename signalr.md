@@ -10,8 +10,6 @@ SignalR est une library qui simplifie l’ajout de fonctionnalitée web en temps
 
 Ceci permet à du code côté serveur de push du content au client instantanément.
 
-
-
 Bons candidats pour SignalR :
 
 * Applications qui ont besoin d’update du serveur fréquemment comme les jeux vidéos, réseaux sociaux, du vote, des enchères, des cartes et GPS
@@ -26,8 +24,6 @@ SignalR fournit une API afin de créer des appels REMOTE PROCEDURE CALLS \(RPC\)
 
 Les RPC appellent des fonctions JavaScript sur le client depuis du code .NET côté Serveur.
 
-
-
 La library SignalR sur ASP .NET Core :
 
 * Prend en charge la gestion des connexions
@@ -36,7 +32,7 @@ La library SignalR sur ASP .NET Core :
 
 * Permet d’envoyer des messages à des clients spécifiques ou des groupes de clients.
 
-* Est open-source sur GitHub : https://github.com/aspnet/signalr
+* Est open-source sur GitHub : [https://github.com/aspnet/signalr](https://github.com/aspnet/signalr)
 
 * Est Scalable
 
@@ -66,8 +62,7 @@ Un protocol de text basé sur du JSON, et un protocol en binaire, basé sur Mess
 
 [https://msgpack.org/](https://msgpack.org/)
 
-\(MessagePack : Comme JSON mais ne plus petit\)  
-
+\(MessagePack : Comme JSON mais ne plus petit\)
 
 Hubs appelle du code côté client en envoyant des messages en utilisant le transport actif.
 
@@ -83,15 +78,15 @@ Endpoints fournit une API raw socket-like, permettant de lire et écrire depuis 
 
 L’API Hubs est construite en s’appuyant sur la couche Endpoints.
 
-  
-
-
 ![](https://lh4.googleusercontent.com/DrZcgmtumeQh_FiqufI6tCOvocN-estwXM8tNjjXU_0l5bjOQcErToX0WAYeTSVCc5DFYiw0rXRjV1TpRg755qdrAb6rUHd4pMTQsw3qAdks0rKxMdypX2zNvOxEXt_BQXJ7uuBo)
 
 ## Démarrer avec SignalR sur ASP.NET Core
 
 Source :[https://docs.microsoft.com/en-us/aspnet/core/signalr/get-started?view=aspnetcore-2.1&tabs=visual-studio](https://docs.microsoft.com/en-us/aspnet/core/signalr/get-started?view=aspnetcore-2.1&tabs=visual-studio)
 
-  
+En javascript : Capte le click du boutton, et appelle le hub, qui lui va appeler le javascript pour écrire le message à l'ensemble des users.
 
+à l'utilisation ça donne :
+
+![](/assets/SignalRSerious.PNG)
 
