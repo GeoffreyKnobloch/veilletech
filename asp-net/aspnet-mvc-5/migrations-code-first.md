@@ -1,14 +1,8 @@
-Titre 2 : Utilisation de la migration lors de changements du model
-
-  
-
+# Utilisation de la migration lors de changements du model
 
 Source :[https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-new-field](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-new-field)
 
 Titre 3 : Mise en place de la Migration Code First
-
-  
-
 
 D’abord : Supprimer la bdd. \(fichier .mdf généré par Entity Framework\).
 
@@ -16,35 +10,17 @@ En suite, ouvrir la Package Manager Console :
 
 Tools/NuGet Package Manager/Package Manager Console
 
-  
-
-
 Puis entrer la commande :
 
 Enable-Migrations -ContextTypeName MvcMovie.Models.MovieDBContext
 
-  
-
-
 Cela va créer un fichier Configuration.cs dans le dossier Migrations
-
-  
-
 
 Dans ce fichier il y a une méthode Seed, qu’on peut remplacer par w/e est prévu dans le projet pour peupler la DataBase.
 
-  
-
-
 La migration Code First appelle la méthode Seed après chaque migration.
 
-  
-
-
 Pour éviter tous problèmes, il est préférable d’utiliser la méthode AddOrUpdate pour peupler la DB dans Seed :
-
-  
-
 
 protected override void Seed\(MvcMovie.Models.MovieDBContext context\)
 
@@ -66,9 +42,6 @@ Price = 7.99M
 
 },
 
-  
-
-
 new Movie
 
 {
@@ -83,9 +56,6 @@ Price = 8.99M
 
 },
 
-  
-
-
 new Movie
 
 {
@@ -99,9 +69,6 @@ Genre = "Comedy",
 Price = 9.99M
 
 },
-
-  
-
 
 new Movie
 
@@ -119,41 +86,21 @@ Price = 3.99M
 
 \);
 
-
-
 }
 
-  
-
-
 Une migration : Appel à update-database dans le package Manager Console.
-
-  
-
 
 La méthode doit update les rows s’ils sont déjà insérés. ou les insérer s’ils n’existent pas déjà.
 
 C’est pourquoi on utilise AddOrUpdate afin de faire un “upsert”.
 
-  
-
-
 AddOrUpdate semble n’être adapté qu’en cas de Seed dans le cadre de la migration justement.
 
 Source :[http://thedatafarm.com/data-access/take-care-with-ef-4-3-addorupdate-method/](http://thedatafarm.com/data-access/take-care-with-ef-4-3-addorupdate-method/)
 
-  
-
-
 En suite, il faut build le projet \(CTRL SHIFT B\).
 
-  
-
-
 En suite, il faut créer une classe DbMigration. Celle-ci va créer une nouvelle DataBase. C’est pourquoi nous avons supprimé la base \(\*.mdf\).
-
-  
-
 
 Dans le Package Manager Console, taper la commande :
 
@@ -161,27 +108,15 @@ add-migration Initial
 
 \(Le mot Initial est arbitraire, il est utilisé pour nomer le fichier de migration ainsi créé\).
 
-  
-
-
 Code First Migrations crée alors une nouvelle classe dans le dossier Migrations, avec le nom {Date}\_Initial.cs
 
 Cette classe contient le code qui crée le schéma de database.
-
-  
-
 
 Dans le package Manager Console, taper :
 
 update-database
 
-  
-
-
 Cela a pour conséquence de run le fichier {Date}\_Initial pour créer la DataBase, ainsi que la méthode Seed pour là peupler.
-
-  
-
 
 Ces simples étapes ont permis de se préparer à la migration en cas de changement dans le model :
 
@@ -199,39 +134,21 @@ Ces simples étapes ont permis de se préparer à la migration en cas de changem
 
 7. Commande : update-database
 
-  
-
-
 Titre 3 : S’adapter à un changement du model
-
-  
-
 
 Ajouter la propriété sur le model
 
 Build la solution
 
-  
-
-
 Adapter l’attribut Bind pour Create et Edit du controller correspondant :
 
 \[Bind\(Include = "ID,Title,ReleaseDate,Genre,Price,Rating"\)\]
-
-  
-
 
 Dans Index.cshtml, ajouter l’affichage de la propriété
 
 Dans Create.cshtml, ajouter l’édition pour cette propriété
 
-  
-
-
 Si on run l’application à ce stade, la DataBase n’a pas évolué, le model ne correspond plus à la DB et une erreur va se produire pour cette raison.
-
-  
-
 
 Pour faire évoluer la DB, plusieurs approches sont possibles :
 
@@ -241,16 +158,7 @@ Pour faire évoluer la DB, plusieurs approches sont possibles :
 
 3. Utiliser Code First Migrations pour mettre à jour le schema de Database.
 
-  
-
-
-  
-
-
 Nous allons utiliser Code FIrst Migrations.
-
-  
-
 
 D’abord, on met à jour la méthode de Seed pour y rajouter le champ manquant pour chaque objets :
 
@@ -270,9 +178,6 @@ Price = 7.99M
 
 },
 
-  
-
-
 Build la solution,
 
 Ouvrir le Package Manager Console, commande : add-migration Rating
@@ -286,7 +191,4 @@ Commande : update-database
 La database est updaté, le nouveau champ est ajouté.
 
 Voir[https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)pour plus d’information sur EF.
-
-  
-
 
