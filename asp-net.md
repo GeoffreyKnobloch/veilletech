@@ -1,4 +1,4 @@
-# ASP .NET
+# ASP.NET
 
 Beaucoup de connaissances exposées sur la partie ASP.NET Core 2.x peuvent être réutilisées dans le cadre d’un projet ASP.NET sur .NET Framework.
 
@@ -22,7 +22,7 @@ Q : \(Transverse ASP.NET , ASP.NET Core \(comme beaucoup de notions\)\) Comment 
 
 R : &lt;Unknown&gt;, mais ASP.NET est plus mature et peut être que répondre à cette question dans le cadre de l’étude sur ASP.NET sera plus aisé. ASP.NET Core partage probablement énormément de similitude dans ce domaine.
 
-## Overview ASP .NET
+## Overview ASP.NET
 
 Source : [https://docs.microsoft.com/en-US/aspnet/overview](https://docs.microsoft.com/en-US/aspnet/overview): la doc officielle
 
