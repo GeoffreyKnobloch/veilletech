@@ -26,6 +26,7 @@
     * [Model](asp-net/aspnet-mvc-5/model.md)
     * [Model depuis Controller](asp-net/aspnet-mvc-5/acces-au-model-depuis-le-controller.md)
     * [Barre de recherche](asp-net/aspnet-mvc-5/barre-de-recherche.md)
+    * [Migrations Code First](asp-net/aspnet-mvc-5/migrations-code-first.md)
 * [Blazor](blazor.md)
 * [DevOps](devops.md)
 * [Intégration et Déploiement](integration-et-deploiement-avec-vsts.md)
