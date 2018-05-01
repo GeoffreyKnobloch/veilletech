@@ -2,17 +2,17 @@
 
 Source :[https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-new-field](https://docs.microsoft.com/en-US/aspnet/mvc/overview/getting-started/introduction/adding-a-new-field)
 
-Titre 3 : Mise en place de la Migration Code First
+## Mise en place de la Migration Code First
 
-D’abord : Supprimer la bdd. \(fichier .mdf généré par Entity Framework\).
+D’abord : **Supprimer la bdd**. \(fichier .mdf généré par Entity Framework\).
 
 En suite, ouvrir la Package Manager Console :
 
-Tools/NuGet Package Manager/Package Manager Console
+**Tools/NuGet Package Manager/Package Manager Console**
 
 Puis entrer la commande :
 
-Enable-Migrations -ContextTypeName MvcMovie.Models.MovieDBContext
+`Enable-Migrations -ContextTypeName MvcMovie.Models.MovieDBContext`
 
 Cela va créer un fichier Configuration.cs dans le dossier Migrations
 
@@ -22,71 +22,41 @@ La migration Code First appelle la méthode Seed après chaque migration.
 
 Pour éviter tous problèmes, il est préférable d’utiliser la méthode AddOrUpdate pour peupler la DB dans Seed :
 
-protected override void Seed\(MvcMovie.Models.MovieDBContext context\)
-
+```
+protected override void Seed(MvcMovie.Models.MovieDBContext context)
 {
-
-context.Movies.AddOrUpdate\( i =&gt; i.Title,
-
+context.Movies.AddOrUpdate( i => i.Title,
 new Movie
-
 {
-
 Title = "When Harry Met Sally",
-
-ReleaseDate = DateTime.Parse\("1989-1-11"\),
-
+ReleaseDate = DateTime.Parse("1989-1-11"),
 Genre = "Romantic Comedy",
-
 Price = 7.99M
-
 },
-
 new Movie
-
 {
-
 Title = "Ghostbusters ",
-
-ReleaseDate = DateTime.Parse\("1984-3-13"\),
-
+ReleaseDate = DateTime.Parse("1984-3-13"),
 Genre = "Comedy",
-
 Price = 8.99M
-
 },
-
 new Movie
-
 {
-
 Title = "Ghostbusters 2",
-
-ReleaseDate = DateTime.Parse\("1986-2-23"\),
-
+ReleaseDate = DateTime.Parse("1986-2-23"),
 Genre = "Comedy",
-
 Price = 9.99M
-
 },
-
 new Movie
-
 {
-
 Title = "Rio Bravo",
-
-ReleaseDate = DateTime.Parse\("1959-4-15"\),
-
+ReleaseDate = DateTime.Parse("1959-4-15"),
 Genre = "Western",
-
 Price = 3.99M
-
 }
-
-\);
-
+);
 }
+```
 
 Une migration : Appel à update-database dans le package Manager Console.
 
@@ -104,7 +74,7 @@ En suite, il faut créer une classe DbMigration. Celle-ci va créer une nouvelle
 
 Dans le Package Manager Console, taper la commande :
 
-add-migration Initial
+`add-migration Initial`
 
 \(Le mot Initial est arbitraire, il est utilisé pour nomer le fichier de migration ainsi créé\).
 
@@ -114,27 +84,27 @@ Cette classe contient le code qui crée le schéma de database.
 
 Dans le package Manager Console, taper :
 
-update-database
+`update-database`
 
 Cela a pour conséquence de run le fichier {Date}\_Initial pour créer la DataBase, ainsi que la méthode Seed pour là peupler.
 
 Ces simples étapes ont permis de se préparer à la migration en cas de changement dans le model :
 
-1. Supprimer la base \(\*.mdf\)
+1. **Supprimer la base \(\*.mdf\)**
 
-2. Ouvrir Package Manager Console \(Tools/NuGet Package Manager/Package Manager Console\)
+2. **Ouvrir Package Manager Console \(Tools/NuGet Package Manager/Package Manager Console\)**
 
-3. Commande : Enable-Migrations -ContextTypename MvcMovie.Models.MovieDBContext
+3. **Commande : Enable-Migrations -ContextTypename MvcMovie.Models.MovieDBContext**
 
-4. Réécrire la méthode Seed du fichier Configuration.cs du dossier Migrations
+4. **Réécrire la méthode Seed du fichier Configuration.cs du dossier Migrations**
 
-5. Build l’application \(Ctrl + Shift + B\)
+5. **Build l’application \(Ctrl + Shift + B\)**
 
-6. Commande : add-migration Initial
+6. **Commande : add-migration Initial**
 
-7. Commande : update-database
+7. **Commande : update-database**
 
-Titre 3 : S’adapter à un changement du model
+## S’adapter à un changement du model
 
 Ajouter la propriété sur le model
 
