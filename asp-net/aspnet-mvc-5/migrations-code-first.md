@@ -106,9 +106,9 @@ Ces simples étapes ont permis de se préparer à la migration en cas de changem
 
 ## S’adapter à un changement du model
 
-Ajouter la propriété sur le model
+**Ajouter la propriété sur le model**
 
-Build la solution
+**Build **la solution
 
 Adapter l’attribut Bind pour Create et Edit du controller correspondant :
 
@@ -130,33 +130,28 @@ Pour faire évoluer la DB, plusieurs approches sont possibles :
 
 Nous allons utiliser Code FIrst Migrations.
 
-D’abord, on met à jour la méthode de Seed pour y rajouter le champ manquant pour chaque objets :
+D’abord, on **met à jour la méthode de Seed** pour y rajouter le champ manquant pour chaque objets :
 
+```
 new Movie
-
 {
-
 Title = "When Harry Met Sally",
-
-ReleaseDate = DateTime.Parse\("1989-1-11"\),
-
+ReleaseDate = DateTime.Parse("1989-1-11"),
 Genre = "Romantic Comedy",
-
 Rating = "PG",
-
 Price = 7.99M
+}
+```
 
-},
+**Build **la solution,
 
-Build la solution,
-
-Ouvrir le Package Manager Console, commande : add-migration Rating
+Ouvrir le Package Manager Console, commande : `add-migration Rating`
 
 Cela aura pour conséquence de créer la classe DbMigration AddRatingMig
 
-Build la solution,
+**Build **la solution,
 
-Commande : update-database
+Commande : `update-database`
 
 La database est updaté, le nouveau champ est ajouté.
 
