@@ -10,5 +10,5 @@ L'écosystème de logiciels de Node.js est npm.
 
 npm est le plus grand écosystème de bibliothèques open source au monde.
 
-
+Pour obtenir npm, il faut installer Node.js.
 
