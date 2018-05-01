@@ -54,3 +54,11 @@ http.createServer(function (req, res) {
 
 La ligne var uc = require \('upper-case'\) inclut le module upper-case. C'est de cette manière qu'est inclut n'importe quel autre module.
 
+## Node.js
+
+Source : [https://www.w3schools.com/nodejs/default.asp](https://www.w3schools.com/nodejs/default.asp)
+
+Node.js est un environnement serveur open source.
+
+Node.js permet  de run du JavaScript côté sur le Serveur.
+
