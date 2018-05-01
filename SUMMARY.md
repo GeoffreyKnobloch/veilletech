@@ -23,6 +23,7 @@
   * [ASP.NET MVC 5](asp-net/aspnet-mvc-5.md)
     * [Controller](asp-net/aspnet-mvc-5/controller.md)
     * [View](asp-net/aspnet-mvc-5/view.md)
+    * [Model](asp-net/aspnet-mvc-5/model.md)
 * [Blazor](blazor.md)
 * [DevOps](devops.md)
 * [Intégration et Déploiement](integration-et-deploiement-avec-vsts.md)
