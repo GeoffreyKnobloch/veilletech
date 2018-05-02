@@ -129,3 +129,11 @@ On a beaucoup de petits projets, découpés en Petits domaines métiers, plutôt
 
 Exemple de soundcloud :[http://philcalcado.com/2015/09/08/how\_we\_ended\_up\_with\_microservices.html](http://philcalcado.com/2015/09/08/how_we_ended_up_with_microservices.html)
 
+## Clean Architecture
+
+Source : [https://www.dotnetrocks.com/?show=1538](https://www.dotnetrocks.com/?show=1538)
+
+
+
+
+
