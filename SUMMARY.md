@@ -43,4 +43,5 @@
 * [Clean Code](clean-code.md)
 * [Node.js](nodejs.md)
 * [Ressources](ressources.md)
+* [Pair programming](pair-programming.md)
 
