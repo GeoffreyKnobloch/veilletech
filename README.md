@@ -6,7 +6,7 @@ Les sujets couverts sont variés : En allant de basiques de la programmation com
 
 Les solutions choisies pour un thème donné sont globalements orientées vers les **technologies Microsoft**, qui sont ma spécialité :
 
-C\# pour langage, .NET Core ou .NET Framework pour framework, Visual Studio pour IDE, VSTS pour service Git et pour l'intégration et le déploiement continu en méthodologie DevOps.
+C\# pour langage, .NET Core ou .NET Framework pour framework, Visual Studio pour IDE, VSTS pour service Git et pour l'intégration et le déploiement continu sur Azure en méthodologie DevOps.
 
 ## A propos de l'auteur
 
