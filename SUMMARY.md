@@ -41,7 +41,7 @@
   * [Structural Patterns](dotnet/design-pattern/structural-patterns.md)
     * [Data Transfer Object](dotnet/design-pattern/structural-patterns/data-transfer-object.md)
 * [Clean Code](clean-code.md)
+* [Pair programming](pair-programming.md)
 * [Node.js](nodejs.md)
 * [Ressources](ressources.md)
-* [Pair programming](pair-programming.md)
 
