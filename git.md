@@ -1,10 +1,52 @@
 # Git
 
+## Définitions
+
+* Mainline : La ligne de développement de référence depuis la quelle les builds sont créés, qui sont utilisés pour le déploiement.
+* Feature Branching : Une pratique ou les gens ne mergent pas leur code dans la mainline tant que la feature n'est pas terminée.
+* Intégration continue : Une pratique pour s'assurer que le logiciel est toujours fonctionnel, et pour avoir des feedbacks permanent à chaque changements
+
 ## Feature Branching is evil
 
 Source : [https://www.meetup.com/fr-FR/Software-Craftsmanship-Lille/events/250063082/?eventId=250063082&from=ref](https://www.meetup.com/fr-FR/Software-Craftsmanship-Lille/events/250063082/?eventId=250063082&from=ref)
 
+[https://speakerdeck.com/tdpauw/agile-belgium-meetup-201802-feature-branching-considered-evil](https://speakerdeck.com/tdpauw/agile-belgium-meetup-201802-feature-branching-considered-evil)
 
+### But d'une organisation
 
+Minimiser le lead time pour créer un impact business positif.
 
+### Les raisons d'avoir des feature branches qui restent longtemps
+
+* Permet de travailler en isolation, ce qui augmente la productivité de chacun
+
+Développer de façon isolée va permettre à un individu \(ou groupe d'individu\) d'aller plus vite, mais ça ne permet pas à l'équipe d'aller plus vite.
+
+Le temps passé à Merge et à retravailler une feature ne peut pas être estimé, et varie beaucoup. L'équipe ne peut aller qu'aussi vite que le merge le plus lent.
+
+* Si on s'apperçoit qu'un refactoring sur une branche ne donne rien de bon au final, on peut juste le supprimer.
+
+Au lieu de se lancer sur des expérimentations en se basant sur le code de production, mieux vaut faire un "spike" \(poc\) afin d'explorer le potentiel d'une solution, répondre à un problème donné et ignorer le reste, puis supprimer le poc une fois que le savoir-faire a été acquis pour développer l'idée sur le code de prod.
+
+* On peut contrôller la qualité de ce qui va en production
+
+L'objectif est déliminer un candidat à la release le plus tôt possible dans le process.
+
+Éliminer un candidat contenant beaucoup de contenu est contre-productif.
+
+* On peut contrôller quelles features vont en production
+
+Au lieu d'utiliser le contrôle de code source pour choisire les features qui vont en production, il est préférable de développer une architecture modulaire, avec la possibilité de facilement inclure ou exclure des features au runtime ou au moment du déploiement.
+
+### Les problèmes du long time feature branching
+
+#### Continuous Isolation
+
+Pendant que la mainline est en CI, la feature branche reste isolée. Si on paramètre la feature branche pour builder sur la feature branche, l'unique information d'une build réussie sur la feature branche, est que dans le cadre de la feature branche, la build succeed, ça ne veut pas dire qu'on va réussir à merger. CI stand plutôt pour Continuous Isolation dans ce cas là.
+
+### Promiscuous Integration
+
+Lorsque 2 feature branche ont besoins l'une de l'autre ... Et qu'elles s'échangent des feats, on ne sait plus qui a quoi ...
+
+Continuer : [https://speakerdeck.com/tdpauw/agile-belgium-meetup-201802-feature-branching-considered-evil?slide=21](https://speakerdeck.com/tdpauw/agile-belgium-meetup-201802-feature-branching-considered-evil?slide=21)
 
