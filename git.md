@@ -14,6 +14,7 @@
 * Outgoing Commits
 * Rebase
 * Merge :  mettre les  modifs d'une branche sur une autre
-
+* remotes/origin : push ==&gt; push la branche sur origin
+* 
 
 
