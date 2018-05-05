@@ -70,6 +70,15 @@ Chaques jours de developpements, toute la valeur ajoutée par le développement 
 
 Plus il y a de feature branche, plus il devient complexe de comprendre le système.
 
+#### Evilness
+
+Long time feature branching est un symptome de mauvaises pratiques
+
+Ils sont un problèmes lorsque
+
+* le développeur ne sait pas développer en petits incréments
+* le code est trop couplé, et qu'il manque de tests
+
 ### Eviter le long time Feature branching : Trunk Based Development
 
 Toute l'équipe développe sur la mainline : le Trunk
@@ -116,7 +125,7 @@ Attention, car feature toggles mal fait est evil aussi.
 
 ### Avantages du trunk based development
 
-Plus de commits sur la mainline 
+Plus de commits sur la mainline
 
 ==&gt; Builds plus fréquents
 
@@ -125,10 +134,4 @@ Plus de commits sur la mainline
 ==&gt; Time To Market réduit !
 
 ==&gt; Plus de retour d'expériences, plus rapidement
-
-
-
-
-
-
 
