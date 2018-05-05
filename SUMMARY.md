@@ -32,6 +32,7 @@
 * [DevOps](devops.md)
 * [Intégration et Déploiement](integration-et-deploiement-avec-vsts.md)
 * [Git](git.md)
+  * [Feature branching is evil](git/feature-branching-is-evil.md)
 * [Microsoft Azure](microsoft-azure.md)
 * [Pattern](dotnet/design-pattern.md)
   * [Creational Patterns](dotnet/design-pattern/creational-patterns.md)
