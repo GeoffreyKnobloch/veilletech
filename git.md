@@ -12,6 +12,8 @@
 * Commit
 * Incoming Commits
 * Outgoing Commits
+* Rebase
+* Merge :  mettre les  modifs d'une branche sur une autre
 
 
 
