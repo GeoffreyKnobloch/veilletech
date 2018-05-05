@@ -88,7 +88,47 @@ Si une fonctionnalité n'est pas terminée, mais qu'une partie de son implément
 
 #### Utiliser les branches par abstraction lors de gros refactoring![](/assets/refactoring.PNG)
 
-On souhaite changer Bleu pour à la place mettre Rouge. Mais les Jaunes dépendent de bleu.
+On souhaite changer Bleu ciel pour à la place mettre bleu foncé. Mais les Jaunes ont un bleu.
+
+Donc on crée une interface \(rouge\)
+
+1. 3 Jaunes ont chacuns un bleu
+2. 1 jaune a un IRouge, implémenté par bleu, et 2 jaunes ont toujours un bleu
+3. 2 jaunes ont un IRouge, implémenté par bleu, 1 autre jaune a un IRouge, implémenté par BleuFoncé
+4. Les 3 jaunes ont un IRouge, implémenté par BleuFoncé
+
+#### Faire des Feature Toggles pour découpler le release de feature du déploiement de code
+
+* Releases Toggle \(un .conf, une variable à valoriser lors de la RELEASE\)
+* Ops Toggles
+* Experiment Toggles
+* Permission Toggles
+
+Toggles determinés à la runtime pour les 3 derniers
+
+Attention, car feature toggles mal fait est evil aussi.
+
+#### Le code Reviews sans feature branche
+
+* Pair Programming : pre-commit review
+* création d'une short lived branche + Pull request : pre-merge
+* Direct commit : Review tous les commits sur la mainline
+
+### Avantages du trunk based development
+
+Plus de commits sur la mainline 
+
+==&gt; Builds plus fréquents
+
+==&gt; Déploiements plus fréquents
+
+==&gt; Time To Market réduit !
+
+==&gt; Plus de retour d'expériences, plus rapidement
+
+
+
+
 
 
 
