@@ -12,6 +12,8 @@ Source : [https://www.meetup.com/fr-FR/Software-Craftsmanship-Lille/events/25006
 
 [https://speakerdeck.com/tdpauw/agile-belgium-meetup-201802-feature-branching-considered-evil](https://speakerdeck.com/tdpauw/agile-belgium-meetup-201802-feature-branching-considered-evil)
 
+![](/assets/31945345_10156452115494885_1204198049706934272_n.jpg)
+
 ### But d'une organisation
 
 Minimiser le lead time pour créer un impact business positif.
@@ -44,9 +46,49 @@ Au lieu d'utiliser le contrôle de code source pour choisire les features qui vo
 
 Pendant que la mainline est en CI, la feature branche reste isolée. Si on paramètre la feature branche pour builder sur la feature branche, l'unique information d'une build réussie sur la feature branche, est que dans le cadre de la feature branche, la build succeed, ça ne veut pas dire qu'on va réussir à merger. CI stand plutôt pour Continuous Isolation dans ce cas là.
 
-### Promiscuous Integration
+#### Promiscuous Integration
 
 Lorsque 2 feature branche ont besoins l'une de l'autre ... Et qu'elles s'échangent des feats, on ne sait plus qui a quoi ...
 
-Continuer : [https://speakerdeck.com/tdpauw/agile-belgium-meetup-201802-feature-branching-considered-evil?slide=21](https://speakerdeck.com/tdpauw/agile-belgium-meetup-201802-feature-branching-considered-evil?slide=21)
+#### Cache le travail au reste de l'équipe
+
+Merger fréquemment vers la Mainline = communiquer avec l'équipe
+
+#### Contre le refactoring
+
+Refactor sur une branche, si une autre branche a modifié des éléments refactorisés, il va être très compliqué de merger.
+
+#### Création d'inventory
+
+Chaques jours de developpements, toute la valeur ajoutée par le développement est sur une feature branche, c'est du potentiel non exploité, de l'argent bloqué dans le système.
+
+#### Augmentation du risque
+
+évidemment merger une petite quantité de code en CI est moins risqué que merger une grande quantité de code d'un coup à intégrer.
+
+#### Crée de la compléxité
+
+Plus il y a de feature branche, plus il devient complexe de comprendre le système.
+
+### Eviter le long time Feature branching : Trunk Based Development
+
+Toute l'équipe développe sur la mainline : le Trunk
+
+#### Découper les gros changements en petites incrémentations
+
+Toujours commit sur du **VERT**.
+
+Produire du code **DÉCOUPLÉ**.
+
+Plein de tests **RAPIDES**.
+
+#### Cacher les nouvelles fonctionnalitées non terminées.
+
+Si une fonctionnalité n'est pas terminée, mais qu'une partie de son implémentation est déjà dans le code source en production, c'est perfectly fine.
+
+#### Utiliser les branches par abstraction lors de gros refactoring![](/assets/refactoring.PNG)
+
+On souhaite changer Bleu pour à la place mettre Rouge. Mais les Jaunes dépendent de bleu.
+
+
 
