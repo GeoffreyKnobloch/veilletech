@@ -28,5 +28,11 @@ Setup des Event dans l'Azure portal \(plutôt que VSTS ?\)
 
 ou quand une vidéo est upload, etc ...
 
+## Azure IoT Edge
+
+Ce qui est intéressant, c'est qu'on peut, au lieu de consommer une API, consommer des fonctionnalitées  sur Azure, depuis notre application.
+
+
+
 
 
