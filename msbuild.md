@@ -32,6 +32,8 @@ ou quand une vidéo est upload, etc ...
 
 Ce qui est intéressant, c'est qu'on peut, au lieu de consommer une API, consommer des fonctionnalitées  sur Azure, depuis notre application.
 
+## Azure Cosmos DB
+
 
 
 
