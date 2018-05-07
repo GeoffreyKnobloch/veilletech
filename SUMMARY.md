@@ -45,4 +45,5 @@
 * [Pair programming](pair-programming.md)
 * [Node.js](nodejs.md)
 * [Ressources](ressources.md)
+* [MSBuild](msbuild.md)
 
