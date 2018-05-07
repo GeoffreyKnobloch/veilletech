@@ -2,6 +2,8 @@
 
 Quelques notes sur la MSBuild ...
 
+07/05/18
+
 ## AppCenter
 
 Outil de CI / CD pour développement mobile qui semble tout  aussi simple d'utilisation que VSTS mais pour déployer des applications mobiles \(sur Azure\) et en production sur l'App Store
@@ -34,7 +36,11 @@ Ce qui est intéressant, c'est qu'on peut, au lieu de consommer une API, consomm
 
 ## Azure Cosmos DB
 
+Solution pour appli planétaire
 
+Cosmos DB account on choisit ou on veut mettre des DB dans le monde,
+
+chacun peut R/W et c'est synchronisé \(répliqué\) en temps réel
 
 
 
